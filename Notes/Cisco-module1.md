@@ -1,4 +1,4 @@
-### Modulo 1
+### Modulo 1 - Proyectos de analisis de datos
 El analiis de datos se puede describir como el proceso de uso de datos para responder preguntas, identificar tendencias y extraer información.
 
 Existen 4 tipos de análisis de datos y cada uno responde a un tipo diferente de pregunta, los cuales son;
