@@ -1,4 +1,4 @@
-### Modulo 2 - Introducción
+### Modulo 2 - Introducción a la recopilcación e investigación de datos
 Recoplicacion de datos = Dataset
 
 Metadatos: Es la informacion sobre un dataset, donde incluye una descripcion de lo que contiene dicho dataset y como esta formateado.
