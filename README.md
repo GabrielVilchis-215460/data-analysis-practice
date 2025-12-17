@@ -14,12 +14,12 @@ It contains notes, exercises, and small projects covering different techniques, 
 ```text
 data-analysis-practice/
 │
-├── notes/              # Personal notes and theory summaries
-├── exercises/          # Practice problems and guided exercises
-├── projects/           # Small to medium data analysis projects
 ├── datasets/           # CSV or other data files used in analyses
+├── exercises/          # Practice problems and guided exercises
 ├── notebooks/          # Jupyter notebooks for experiments and analysis
-├── resources/          # Resources from courses and books
+├── notes/              # Personal notes and theory summaries
+├── projects/           # Small to medium data analysis projects
+├── python files/       # Python exercises and examples
 └── README.md
 ```
 ## 🧰 Tools & Technologies
