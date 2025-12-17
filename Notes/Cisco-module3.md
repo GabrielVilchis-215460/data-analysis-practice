@@ -99,3 +99,14 @@ En un proceso de ELT, los pasos de carga y transformación se invierten, ELT per
 Los datos (que posiblemente incluyan algunos datos vacíos o con errores) pueden pasar por otra parte del paso de transformación conocida como “limpieza” o “depuración” de datos, y la validación le permite saber si los datos necesitan limpieza. Algunos ejemplos de limpieza de datos son la eliminación de registros en blanco y la estandarización de formatos como la fecha, la hora y la ubicación. La parte de limpieza del paso de transformación garantiza aún más la uniformidad de los datos de origen.
 
 3. Carga: Luego, los datos transformados se cargan en la base de datos para realizar consultas. El proceso de carga real varía ampliamente, dependiendo de los tipos de datos de origen, el tipo de base de datos de destino y el tipo de consulta que se debe realizar. Algunas organizaciones también pueden sobrescribir datos existentes con datos acumulativos más nuevos. Durante el paso de carga, se aplican las reglas que se han definido en el esquema de base de datos. Estas reglas verifican las características necesarias, como la unicidad y la coherencia de los datos, o que los campos obligatorios no estén vacíos. Estas reglas ayudan a garantizar que la carga y cualquier consulta posterior de los datos sea correcta.
+
+## Funciones utiles para la limpieza de datos en excel
+=MAYUSC(dirección de celda) - para conversión a mayúsculas
+
+=MINUSC(dirección de celda) - para conversión a minúsculas
+
+=NOMPROPIO(dirección de celda): para la conversión a mayúsculas en la primera letra de cada palabra.
+
+=LARGO() o LEN() = Longitud
+
+=ESPACIOS() o TRIM() = Elimina espacios
