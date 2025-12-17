@@ -11,4 +11,35 @@ It contains notes, exercises, and small projects covering different techniques, 
 - Build reproducible analysis workflows
 
 ## 📂 Repository Structure
+```text
+data-analysis-practice/
+│
+├── notes/              # Personal notes and theory summaries
+├── exercises/          # Practice problems and guided exercises
+├── projects/           # Small to medium data analysis projects
+├── datasets/           # CSV or other data files used in analyses
+├── notebooks/          # Jupyter notebooks for experiments and analysis
+├── resources/          # Resources from courses and books
+└── README.md
+```
+## 🧰 Tools & Technologies
 
+## 📌 Topics Covered
+
+## 🚀 Projects Examples
+
+## 📈 Learning Approach
+
+## 📚 Resources
+
+## 📝 Notes
+
+This repository is a learning-oriented workspace, so code and analysis may evolve over time as new concepts are learned.
+
+## 🤝 Contributions
+
+Suggestions, improvements, or feedback are welcome.
+Feel free to open an issue or submit a pull request.
+
+## 📄 License
+**Author:** Gabriel Vilchis
