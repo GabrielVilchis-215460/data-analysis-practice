@@ -1,0 +1,1696 @@
+<!DOCTYPE html><html><head>
+<style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 1rem;
+      }
+      ol,
+      ul {
+        margin-bottom: 0in;
+      }
+      table {
+        margin-top: 1rem;
+        border: 1px solid gray;
+        width: 7in;
+        border-collapse: collapse;
+      }
+
+      table > thead > tr > .openTableTextBox__table-header-data {
+        text-align: center;
+        margin-top: 6pt;
+        margin-right: 0in;
+        margin-bottom: 6pt;
+        margin-left: 0in;
+        text-align: center;
+        line-height: 115%;
+        page-break-after: avoid;
+        font-size: 10pt;
+        font-family: "Arial", sans-serif;
+        font-weight: bold;
+        background: #dbe5f1;
+        padding: 0.5rem;
+      }
+      .openTableTextBox__answerText
+        table
+        > thead
+        > tr
+        > .openTableTextBox__table-header-data {
+        background: #f2dbdb !important;
+      }
+      .openTextBox__textArea-container {
+        margin-top: 6pt;
+        margin-right: 0in;
+        margin-bottom: 6pt;
+        font-size: 10pt;
+        font-family: "Arial", sans-serif;
+        width: 50%;
+      }
+      .openTableTextBox__fieldset {
+        padding: 5px;
+      }
+      td {
+        margin-top: 3pt;
+        margin-right: 0in;
+        margin-bottom: 3pt;
+        margin-left: 0in;
+        font-size: 10pt;
+        font-family: "Arial", sans-serif;
+        width: 98.85pt;
+        border: solid windowtext 1pt;
+        border-top: none;
+        padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+      }
+      textarea {
+        width: 100%;
+      }
+      .answergray {
+        padding: 0.2rem;
+      }
+
+      .openTableTextBox__widget {
+        margin-top: 6pt;
+        margin-right: 0in;
+        margin-bottom: 6pt;
+        margin-left: 0.25in;
+      }
+
+      .show-answer,
+      .hide-answer {
+        padding: 0.5rem 1rem;
+        background-color: #3d692b;
+        color: #fff;
+        border: 0px;
+        cursor: pointer;
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
+      }
+
+      .openTextBoxController__button-container {
+        display: flex;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .openTextBoxController__button-container .btn-text {
+        margin: 10px;
+      }
+
+      .btn-text {
+        border: 0px;
+        padding: 0.5rem 1rem;
+        background-color: #3d692b;
+        color: #fff;
+        border-radius: 0;
+        cursor: pointer;
+      }
+
+      .u-display-none {
+        display: none;
+      }
+      .openTextBox__postText, openTableTextBox__postText {
+        margin-top: 0.5rem;
+      }
+      .edit-comment {
+        display: none;
+      }
+      .js-heading-inner {
+        display: none;
+      }
+      .block__title-inner,
+      .article__title-inner {
+        display: block;
+        font-size: 1.5em;
+        margin-block-start: 0.83em;
+        margin-block-end: 0.83em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+      }
+      h2{
+        font-size: 1.25em;
+      }
+      h3{
+        font-size: 1.125em;
+      }
+      .table
+        > .table-inner
+        > .table-wrapper
+        > .table-widget
+        > table
+        > tbody
+        > tr
+        > th {
+        border: solid windowtext 1pt;
+      }
+      table tbody tr th, table thead tr th{
+        border: solid windowtext 1pt;
+        background-color: #d6d8dc;
+      }
+      .openTableTextBox__answerText
+        table
+        > thead
+        > tr
+        > .openTableTextBox__table-header-data {
+        background: #f2dbdb !important;
+      }
+      .command-output > .table-inner > .table-wrapper > .table-widget > table,
+      .command-output
+        > .table-inner
+        > .table-wrapper
+        > .table-widget
+        > table
+        > tbody
+        > tr
+        > td,
+      .command-output
+        > .table-inner
+        > .table-wrapper
+        > .table-widget
+        > table
+        > tbody
+        > tr
+        > th {
+        border: none !important;
+        text-align: right !important;
+      }
+      .simple-table > .table-inner > .table-wrapper{
+        margin-left: 1.5rem;
+      }
+      .openTextBox__widget {
+        margin-left: 1.5rem;
+      }
+      img {
+        width: 30%;
+        height: auto;
+        margin-top: 1rem;
+        margin-left: 3rem;
+      }
+      .answergray {
+        background-color: #ccc;
+      }
+      .openTableTextBox__widget > .answergray {
+        background-color: #fff !important;
+      }
+      li > ul,ol > li{
+        margin-left: 0px !important;
+      }
+      img {
+        width: 30%;
+        height: auto;
+        margin-top: 1rem;
+        margin-left: 3rem;
+      }
+      
+      .component__title{
+        font-family: inherit;
+        font-size: 1.65em;
+        font-weight: 600;
+        line-height: 1.5;
+      }
+
+      .component__body {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+
+      .accessibility-completion-indicator{
+        display: none;
+      }
+
+      .check__hidden {
+        display: none;
+      }
+
+      .check__button {
+        border: none;
+        border-radius: 6px !important;
+        background-color: #6abf4b;
+        color: #fff;
+        min-width: 100px;
+        margin: 0.625rem 0;
+        padding: 0.7rem;
+      }
+
+      .check__widget .check__solution .DevConfigGray {
+        background-color: rgb(214,216,220);
+        font-weight: bold;
+      }
+
+      .check-inner .check__widget .check__solution .DevConfigs {
+        margin: 0px;
+        line-height: 115%;
+        font-family: "Courier New", Courier, monospace;
+      }
+
+      .check__solution  {
+        line-height: 1.5;
+      }
+      .mcq__inner .mcq__widget .mcq__widget-inner {
+        margin-block: 1rem;
+      }
+      .mcq__inner .mcq__widget .mcq__item {
+        display: flex;
+        gap: 0.2rem;
+      }
+      .mcq__inner .mcq__widget .mcq__item .mcq__item-label .mcq__item-text .screenReader-position-text{
+        display: none;
+      }
+      .opentabletextbox-inner .opentabletextBox__widget .openTableTextBox__answerText.answergray {
+        background-color: transparent;
+      }
+      .openTextBox__inner .openTextBox__widget .answergray.is-graphic-in-openTextBox{
+        background-color: transparent;
+      }
+      .openTextBox__inner .openTextBox__widget .answergray.is-graphic-in-openTextBox img{
+        margin-block: 1rem;
+        margin-left: initial;
+      }
+      .component__content .component__body-inner .pageTracer-h4-title-hide {
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        font-size: 0px;
+        color: rgb(var(--neutral-2));
+        font-weight: normal;
+      }
+      .table-inner .table__widget table tr.TableHeading th, .table-inner .table__widget table tr.TableHeading td, .table-inner .table__widget table tr td.TableHeading, .opentabletextbox-table thead tr.TableHeading th, .opentabletextbox-table tbody tr.TableHeading td, .opentabletextbox-table tbody tr td.TableHeading {
+        background-color: #d6d8dc;
+        text-align: center;
+        font-weight: bold;
+      }
+      .component__content .component__body-inner .CMD, .component__content .component__body-inner .CMDOutput, .component__content .component__body-inner .CMDOutput__table{
+        margin-top: 4px;
+        margin-inline-end: 0px;
+        margin-bottom: 4px;
+        margin-inline-start: 30px;
+        font-family: "Courier New", Courier, monospace;
+      }
+      [dir="rtl"] .component__content .component__body-inner .CMDOutput__table span {
+        direction: ltr;
+        display: inline-block;
+      }
+      .openTextBox__inner .openTextBox__widget .CMD, .openTextBox__inner .openTextBox__widget .CMDOutput{
+        margin-top: 4px;
+        margin-inline-end: 0px;
+        margin-bottom: 4px;
+        font-family: "Courier New", Courier, monospace;
+      }
+      .openTextBox__inner .openTextBox__widget .DnTbold, .openTextBox__inner .openTextBox__widget .BodyTextL25Bold, .component__content .component__body-inner .BodyTextL25Bold, .component__content .component__body-inner .DnTbold, .table-inner .table__widget table tr .DnTbold {
+        font-weight: bold;
+      }
+      .component__content .component__body-inner .SubStepNum {
+        text-indent: -25.5px;
+        margin-inline-start: 50px;
+      }
+      .component__content .component__body-inner .BodyTextL50 {
+        margin-inline-start: 30px;
+      }
+      .component__content .component__body-inner .Bulletlevel1 {
+        text-indent: -19px;
+        margin-inline-start: 48px;
+      }
+      .component__content .component__body-inner .Bulletlevel2 {
+          text-indent: -19px;
+          margin-inline-start: 72px;
+      }
+      .openTextBox__inner .openTextBox__widget .ReflectionQ, .component__content .component__body-inner .SubStepAlpha {
+          text-indent: -25.5px;
+          margin-inline-start: 30px;
+      }
+    </style>
+
+</head><body><!---->
+            <div class="article 639216cfe2d3830779e3a5dc background-color-white remove-padding-top ">
+                <div class="article__inner">
+                <div class=" no-adaptive-scroll">
+                    <!--?lit$888967025$-->
+                        <div class=""> 
+                            <base-view type="article" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="article__header-wrapper background-color-white remove-padding-top ">
+        <div class="article__header ">
+              <div class="article__header-inner ">
+                  
+                    <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+              </div>
+          </div>
+        </div>
+      
+    </base-view>
+                            <div class="block__container " style="">
+                                <!--?lit$888967025$--><!---->
+                                    <block-view modelid="639216cfe2d3830779e3a5dd" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 4.7619%;"><!---->
+                
+                <div data-socialgoodpulse-id="639216cfe2d3830779e3a5dd" class="639216cfe2d3830779e3a5dd block background-color-white remove-bottom-padding remove-padding-top is-complete">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="639216cfe2d3830779e3a5dd" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper background-color-white remove-bottom-padding remove-padding-top ">
+        <div class="block__header ">
+              <div class="block__header-inner ">
+                  
+                    <!--?lit$888967025$--> <div class=" block__title ">
+                      <!--?lit$888967025$--><heading-view aria-hidden="true" id="639216cfe2d3830779e3a5dd-heading-view" headingtitle="Práctica de Laboratorio - Preparación de Datos" modelid="639216cfe2d3830779e3a5dd" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="js-heading is-complete">
+        <div class="js-heading-inner" role="heading" id="block-heading" aria-level="3">
+        <span class="aria-label"> <!--?lit$888967025$-->Completo &nbsp;<!--?lit$888967025$-->Práctica de Laboratorio - Preparación de Datos</span>
+        </div>
+      </div>
+    </heading-view>
+                        <div tabindex="0" role="heading" class="block__title-inner " aria-level="3">
+                        <span class="accessibility-completion-indicator"><!--?lit$888967025$-->Completo </span>
+                        <!--?lit$888967025$-->Práctica de Laboratorio - Preparación de Datos</div>
+                      </div>
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+              </div>
+          </div>
+        </div>
+      
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$888967025$--><!----><text-view modelid="639216d0e2d3830779e3a5ec" class="is-full" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="text-inner component__inner">
+            <div class="component__header-container">
+                <div data-socialgoodpulse-id="639216d0e2d3830779e3a5ec" class="component text 639216d0e2d3830779e3a5ec  is-full is-complete  ">
+                    <base-view type="component" lowercase_component="text" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header text__header">
+              <div class="component__header-inner text__header-inner">
+                  
+                    <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$--> <div class="component__content">
+                      <div tabindex="0" class="component__body text__body">
+                        <div class="component__body-inner text__body-inner"><!--?lit$888967025$--><h2>Objetivos</h2><p>En esta práctica de laboratorio, aprenderá los aspectos básicos de la limpieza de datos en Microsoft Excel. Los datos deben limpiarse antes de poder analizarse. La limpieza de los datos facilita su lectura e interpretación, garantiza la uniformidad y resultados precisos, y permite un mejor proceso de toma de decisiones.</p><p><strong>Parte 1: Explorar un Conjunto de Datos de Muestra</strong></p><p><strong>Parte 2: Limpieza de Datos</strong></p></div>
+                      </div>
+                    </div>
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+              </div>
+          </div>
+        </div>
+      
+    </base-view>
+                </div>
+            </div>
+        </div>
+
+        <!-- div><div class="component__inner"></div></div -->
+        </text-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="639216cfe2d3830779e3a5de" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 4.7619%;"><!---->
+                
+                <div data-socialgoodpulse-id="639216cfe2d3830779e3a5de" class="639216cfe2d3830779e3a5de block background-color-white remove-bottom-padding remove-top-padding ">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="639216cfe2d3830779e3a5de" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper background-color-white remove-bottom-padding remove-top-padding ">
+        <div class="block__header ">
+              <div class="block__header-inner ">
+                  
+                    <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+              </div>
+          </div>
+        </div>
+      
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$888967025$--><!----><text-view modelid="639216d0e2d3830779e3a5ed" class="is-full" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="text-inner component__inner">
+            <div class="component__header-container">
+                <div data-socialgoodpulse-id="639216d0e2d3830779e3a5ed" class="component text 639216d0e2d3830779e3a5ed  is-full   ">
+                    <base-view type="component" lowercase_component="text" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header text__header">
+              <div class="component__header-inner text__header-inner">
+                  
+                    <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$--> <div class="component__content">
+                      <div tabindex="0" class="component__body text__body">
+                        <div class="component__body-inner text__body-inner"><!--?lit$888967025$--><h2>Trasfondo / Escenario</h2><p>El rápido aumento del volumen y la complejidad de los datos se deben al creciente tráfico de datos móviles, el tráfico de computación en la nube y la adopción de tecnologías como la Internet de las Cosas y la Inteligencia Artificial. Los datos en su forma bruta son inútiles a menos que puedan limpiarse y analizarse para proporcionar información que conduzca al conocimiento y la sabiduría para una inteligencia procesable. Las empresas están descubriendo rápidamente que en realidad no quieren los datos en sí: quieren la información y el conocimiento que proviene de los datos y que pueden utilizar para tomar mejores decisiones.</p><h2>Recursos necesarios</h2><ul><li>Dispositivo móvil o PC/computadora portátil con conexión a Internet y Microsoft Excel o un programa de hoja de cálculo similar</li></ul><p><strong>Nota</strong>: Los pasos precisos para formatear y manipular datos en Excel pueden variar entre plataformas, lenguajes y versiones. Las instrucciones de esta práctica de laboratorio se basan en la versión gratuita de Excel disponible en Office.com y es posible que deban modificarse para que coincidan con la plataforma, el software, el lenguaje o la versión del usuario a fin de lograr los resultados que se muestran en esta práctica de laboratorio.</p><ol style="list-style-type:lower-alpha"></ol></div>
+                      </div>
+                    </div>
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+              </div>
+          </div>
+        </div>
+      
+    </base-view>
+                </div>
+            </div>
+        </div>
+
+        <!-- div><div class="component__inner"></div></div -->
+        </text-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="639216cfe2d3830779e3a5e4" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 4.7619%;"><!---->
+                
+                <div data-socialgoodpulse-id="639216cfe2d3830779e3a5e4" class="639216cfe2d3830779e3a5e4 block background-color-white remove-bottom-padding remove-top-padding ">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="639216cfe2d3830779e3a5e4" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper background-color-white remove-bottom-padding remove-top-padding ">
+        <div class="block__header ">
+              <div class="block__header-inner ">
+                  
+                    <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+              </div>
+          </div>
+        </div>
+      
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$888967025$--><!----><text-view modelid="639216d0e2d3830779e3a5f9" class="is-full" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="text-inner component__inner">
+            <div class="component__header-container">
+                <div data-socialgoodpulse-id="639216d0e2d3830779e3a5f9" class="component text 639216d0e2d3830779e3a5f9  is-full   ">
+                    <base-view type="component" lowercase_component="text" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header text__header">
+              <div class="component__header-inner text__header-inner">
+                  
+                    <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$--> <div class="component__content">
+                      <div tabindex="0" class="component__body text__body">
+                        <div class="component__body-inner text__body-inner"><!--?lit$888967025$--><h2>Instrucciones</h2><h3>Parte 1: Explorar un Conjunto de Datos de Muestra</h3><p><strong>Paso 1: Abra Bike Sales_Prepare_Lab 3.4.7.xlsx</strong></p><ol style="list-style-type:lower-alpha"><li>Descargue el archivo de ejemplo de Excel titulado <strong>Bike Sales_Prepare_Lab 3.4.7.xlsx</strong> y explórelo.<br>Una variedad de errores de datos se incluyen intencionalmente en la hoja de trabajo de Venta de Bicicletas para este ejercicio. Las herramientas utilizadas en esta práctica de laboratorio le permitirán encontrar y corregir estos errores.</li></ol><p><strong>Paso 2: Expanda las Columnas de la Hoja de Datos según sea necesario</strong></p><ol start="1" style="list-style-type:lower-alpha"><li>Notará que algunos de los datos están truncados en las columnas. Expanda las columnas para poder revisar los datos.</li></ol><p><strong>Paso 3: Revise los Datos.</strong></p><ol start="1" style="list-style-type:lower-alpha"><li>Revise los datos sin procesar para localizar cualquier dato que pueda sesgar el análisis de datos.</li></ol></div>
+                      </div>
+                    </div>
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+              </div>
+          </div>
+        </div>
+      
+    </base-view>
+                </div>
+            </div>
+        </div>
+
+        <!-- div><div class="component__inner"></div></div -->
+        </text-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="639216cfe2d3830779e3a5df" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 4.7619%;"><!---->
+                
+                <div data-socialgoodpulse-id="639216cfe2d3830779e3a5df" class="639216cfe2d3830779e3a5df block background-color-white remove-bottom-padding remove-top-padding ">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="639216cfe2d3830779e3a5df" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper background-color-white remove-bottom-padding remove-top-padding ">
+        <div class="block__header ">
+              <div class="block__header-inner ">
+                  
+                    <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+              </div>
+          </div>
+        </div>
+      
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$888967025$--><!----><opentextbox-view modelid="639216d0e2d3830779e3a5ee" class="is-full" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="component">
+          <div class="component__inner openTextBox__inner">
+            <div data-socialgoodpulse-id="639216d0e2d3830779e3a5ee" class="component opentextbox 639216d0e2d3830779e3a5ee  is-full   ">
+              <div class="component__header-container">
+                <div data-socialgoodpulse-id="639216d0e2d3830779e3a5ee" class="opentabletextbox ">
+                  <base-view type="component" lowercase_component="openTextBox" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header openTextBox__header">
+              <div class="component__header-inner openTextBox__header-inner">
+                  
+                    <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+              </div>
+          </div>
+        </div>
+      
+    </base-view>
+                </div>
+              </div>
+                  <div class="component__widget openTextBox__widget question-container">
+                      <!--?lit$888967025$--> <div class="openTextBox__preText"><!--?lit$888967025$-->Enumere cualquier problema en los datos que pueda afectar su análisis.</div>                         
+      
+                      <div class="openTextBox__textArea-container">
+                          <fieldset class="openTextBox__fieldset" tabindex="0">
+                          <legend class="openTextBox__legend">
+                            <!--?lit$888967025$--><!--?lit$888967025$-->Área de Respuesta<!--?-->
+                          </legend>
+                          <textarea class="openTextBox__textArea" rows="3" name="answerArea" placeholder="Escriba sus respuestas aquí." aria-label="Escriba sus respuestas aquí.">&lt;!----&gt;&lt;!----&gt;</textarea>
+                          </fieldset>
+                      </div>
+                      <div tabindex="0" class="openTextBox__answerText answergray  hide">
+                        <!--?lit$888967025$-->
+                      <!--?lit$888967025$-->Hay varias respuestas a esta pregunta. Algunos ejemplos son celdas en blanco, datos que deben dividirse en columnas y ceros para la Cantidad Pedida.
+                    </div>
+
+                      <div class="btn__container">                        
+                        <button class="btn-text openTextBox__showButton show-answer show"><!--?lit$888967025$-->Mostrar respuesta</button>     
+                        <button class="btn-text openTextBox__hideButton hide-answer hide"><!--?lit$888967025$-->Ocultar respuesta</button>                    
+                      </div>
+                      <!--?lit$888967025$--><!--?-->
+                  </div>
+              </div>
+            </div>
+          </div>
+        
+      </opentextbox-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="63921a57be12f807530c052f" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 4.7619%;"><!---->
+                
+                <div data-socialgoodpulse-id="63921a57be12f807530c052f" class="63921a57be12f807530c052f block background-color-white remove-bottom-padding remove-top-padding ">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="63921a57be12f807530c052f" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper background-color-white remove-bottom-padding remove-top-padding ">
+        <div class="block__header ">
+              <div class="block__header-inner ">
+                  
+                    <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+              </div>
+          </div>
+        </div>
+      
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$888967025$--><!----><text-view modelid="63921a58be12f807530c0530" class="is-full" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="text-inner component__inner">
+            <div class="component__header-container">
+                <div data-socialgoodpulse-id="63921a58be12f807530c0530" class="component text 63921a58be12f807530c0530  is-full   ">
+                    <base-view type="component" lowercase_component="text" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header text__header">
+              <div class="component__header-inner text__header-inner">
+                  
+                    <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$--> <div class="component__content">
+                      <div tabindex="0" class="component__body text__body">
+                        <div class="component__body-inner text__body-inner"><!--?lit$888967025$--><h3>Parte 2: Limpieza de datos</h3><p><strong>Paso 1: Búsqueda de duplicados</strong></p><p>El conjunto de datos proporcionado puede contener entradas duplicadas. Uno de los procesos de limpieza de datos es encontrarlos y eliminarlos. En el conjunto de datos de ventas de bicicletas, la única columna que no puede tener el mismo valor más de una vez es la columna A, N°_Pedido_Venta (Sales_Order #).</p><ol start="1" style="list-style-type:lower-alpha"><li>Seleccione la columna A para verificar si hay datos duplicados.</li><li>Con la columna A seleccionada, haga clic en el botón <strong>Formato Condicional </strong>(Conditional Formatting) en la barra de herramientas <strong>Inicio </strong>(Home) y seleccione <strong>Resaltar Reglas de Celda </strong>(Highlight Cell Rules) &gt; <strong>Valores Duplicados </strong>(Duplicate Values) y, a continuación, haga clic en <strong>Listo </strong>(Done).<br>El formato condicional debe encontrar dos pares de duplicados. Las celdas A2 y A3 tienen el mismo número de pedido de venta 261695. Además, las celdas A8 y A9 tienen el mismo número de pedido de venta 261701. Estos tipos de entradas duplicadas pueden ocurrir fácilmente durante la entrada manual de datos o al copiar y pegar datos en una hoja de trabajo.</li></ol><p>Revise las entradas duplicadas.</p><p>En el caso de las celdas <strong>A2</strong> y <strong>A3</strong>, parece que el número de pedido de venta 261695 se ingresó incorrectamente en la celda <strong>A3</strong>. Como analista de datos, deberá ir a la fuente de los datos y verificar el número de pedido de venta.</p><p>Para las celdas <strong>A8</strong> y <strong>A9</strong>, una revisión detallada muestra que ambas filas son exactamente iguales. Lo más probable es que en este caso se haya ingresado dos veces una entrada de ventas.</p></div>
+                      </div>
+                    </div>
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+              </div>
+          </div>
+        </div>
+      
+    </base-view>
+                </div>
+            </div>
+        </div>
+
+        <!-- div><div class="component__inner"></div></div -->
+        </text-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="63921d081580fe07c5b6e710" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 4.7619%;"><!---->
+                
+                <div data-socialgoodpulse-id="63921d081580fe07c5b6e710" class="63921d081580fe07c5b6e710 block background-color-white remove-bottom-padding remove-top-padding ">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="63921d081580fe07c5b6e710" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper background-color-white remove-bottom-padding remove-top-padding ">
+        <div class="block__header ">
+              <div class="block__header-inner ">
+                  
+                    <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+              </div>
+          </div>
+        </div>
+      
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$888967025$--><!----><text-view modelid="63921d081580fe07c5b6e711" class="is-full" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="text-inner component__inner">
+            <div class="component__header-container">
+                <div data-socialgoodpulse-id="63921d081580fe07c5b6e711" class="component text 63921d081580fe07c5b6e711  is-full   ">
+                    <base-view type="component" lowercase_component="text" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header text__header">
+              <div class="component__header-inner text__header-inner">
+                  
+                    <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$--> <div class="component__content">
+                      <div tabindex="0" class="component__body text__body">
+                        <div class="component__body-inner text__body-inner"><!--?lit$888967025$--><p><strong>Paso 2: Reparación y Eliminación de Duplicados</strong></p><p>Cuando se identifican entradas de datos duplicadas, deben revisarse cuidadosamente antes de eliminarse, para que los datos relevantes no se eliminen accidentalmente.</p><ol start="1" style="list-style-type:lower-alpha"><li>Para corregir la entrada duplicada en la celda <strong>A3</strong>, cambie el N.º de Pedido de Venta a <strong>261696</strong>. Excel debe eliminar automáticamente el formato condicional.</li><li>Para corregir las filas duplicadas 8 y 9, se debe eliminar una de las filas.<br>1) Una forma de eliminar una entrada duplicada es seleccionar una fila y eliminarla.<br>2) Si hay muchos duplicados que deben eliminarse en un conjunto de datos grande, se puede utilizar la herramienta Eliminar Duplicados (Remove Duplicates).</li><li>Haga clic en la herramienta <strong>Eliminar Duplicados </strong>(Remove Duplicates) en la barra de herramientas <strong>Datos </strong>(Data).</li><li>En el cuadro de diálogo <strong>Eliminar Duplicados </strong>(Remove Duplicates), seleccione la columna <strong>N°_Pedido_Venta </strong>(Sales_Order #) y asegúrese de que la casilla de verificación <strong>Mis datos tienen encabezados </strong>(My list has headers) esté seleccionada. Haga clic en <strong>Aceptar</strong> (OK) para continuar.</li></ol><p>Excel eliminará la segunda instancia de cada conjunto de filas duplicadas.</p></div>
+                      </div>
+                    </div>
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+              </div>
+          </div>
+        </div>
+      
+    </base-view>
+                </div>
+            </div>
+        </div>
+
+        <!-- div><div class="component__inner"></div></div -->
+        </text-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="63921d58be12f807530c0531" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 4.7619%;"><!---->
+                
+                <div data-socialgoodpulse-id="63921d58be12f807530c0531" class="63921d58be12f807530c0531 block background-color-white remove-bottom-padding remove-top-padding ">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="63921d58be12f807530c0531" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper background-color-white remove-bottom-padding remove-top-padding ">
+        <div class="block__header ">
+              <div class="block__header-inner ">
+                  
+                    <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+              </div>
+          </div>
+        </div>
+      
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$888967025$--><!----><text-view modelid="63921d58be12f807530c0532" class="is-full" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="text-inner component__inner">
+            <div class="component__header-container">
+                <div data-socialgoodpulse-id="63921d58be12f807530c0532" class="component text 63921d58be12f807530c0532  is-full   ">
+                    <base-view type="component" lowercase_component="text" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header text__header">
+              <div class="component__header-inner text__header-inner">
+                  
+                    <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$--> <div class="component__content">
+                      <div tabindex="0" class="component__body text__body">
+                        <div class="component__body-inner text__body-inner"><!--?lit$888967025$--><p><strong>Paso 3: Encontrar celdas vacías</strong></p><p>Hay muchas razones por las que una celda puede estar en blanco. Podría ser un error humano debido al ingreso manual de datos o podría ser el resultado de la copia de datos de otras fuentes. El contexto es clave al determinar qué hacer con las celdas vacías. A veces, un analista de datos deberá completar cada celda en blanco de los datos con el mismo valor constante. Otras veces, puede haber pistas de los datos circundantes sobre lo que debería estar en una celda vacía. Es posible que los analistas también tengan que volver a la fuente de los datos para descubrir cuáles deberían ser los valores faltantes.</p><p>Para buscar celdas vacías, se puede utilizar la herramienta <strong>Formato Condicional</strong>.</p><ol start="1" style="list-style-type:lower-alpha"><li>Seleccione la hoja completa haciendo clic en la flecha en la esquina superior izquierda de la hoja de trabajo a la izquierda de la columna A.</li><li>Haga clic en la herramienta <strong>Formato Condicional </strong>(Conditional Formatting) en la barra de herramientas <strong>Estilos </strong>(Styles) y seleccione <strong>Resaltar Reglas de Celda </strong>(Highlight Cell Rules) &gt; <strong>Texto que Contiene </strong>(Text That Contains).</li><li>En la ventana <strong>Formato Condicional </strong>(Conditional Formatting), en <strong>Tipo de Regla </strong>(Rule Type), seleccione <strong>Espacios en Blanco </strong>(Blanks). Cambie <strong>Formato </strong>(Format) a <strong>Relleno verde con texto verde oscuro </strong>(Green fill with dark green text) y haga clic en <strong>Listo </strong>(Done).<br>Cualquier celda en blanco en la hoja de trabajo ahora debe llenarse en verde. Debe haber cuatro celdas resaltadas: C12, G17, M23 y N24.<br>Es probable que un analista de datos revise las celdas en blanco para ver si se pueden obtener los datos que faltan. Si no puede, la única opción puede ser eliminar las filas de los datos faltantes.</li><li>Para simular haber encontrado los datos faltantes, complete las celdas vacías de la siguiente manera:<br>1) <strong>C11 = 5</strong><br>2) <strong>G16 = Youth (&lt;25)</strong><br>3) <strong>M22 = Mountain-200 Black, 42 </strong><br>4) <strong>N23 = 4</strong></li></ol></div>
+                      </div>
+                    </div>
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+              </div>
+          </div>
+        </div>
+      
+    </base-view>
+                </div>
+            </div>
+        </div>
+
+        <!-- div><div class="component__inner"></div></div -->
+        </text-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="639c72dac533e302c3719d8a" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 4.7619%;"><!---->
+                
+                <div data-socialgoodpulse-id="639c72dac533e302c3719d8a" class="639c72dac533e302c3719d8a block background-color-white remove-bottom-padding remove-top-padding ">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="639c72dac533e302c3719d8a" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper background-color-white remove-bottom-padding remove-top-padding ">
+        <div class="block__header ">
+              <div class="block__header-inner ">
+                  
+                    <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+              </div>
+          </div>
+        </div>
+      
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$888967025$--><!----><text-view modelid="639c72dac533e302c3719d8b" class="is-full" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="text-inner component__inner">
+            <div class="component__header-container">
+                <div data-socialgoodpulse-id="639c72dac533e302c3719d8b" class="component text 639c72dac533e302c3719d8b  is-full   ">
+                    <base-view type="component" lowercase_component="text" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header text__header">
+              <div class="component__header-inner text__header-inner">
+                  
+                    <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$--> <div class="component__content">
+                      <div tabindex="0" class="component__body text__body">
+                        <div class="component__body-inner text__body-inner"><!--?lit$888967025$--><p><strong>Paso 4: Análisis de Datos de Texto a Columna</strong></p><p>Observará que algunas de las celdas tienen varios elementos de datos separados por un delimitador de datos como una coma. Por ejemplo, considere la columna <strong>Descripcion_Producto </strong>(Product_Description). Puede analizar los datos en esta columna para que cada parte de la descripción del producto se muestre en su propia columna. Utilizará la función <strong>Texto a Columnas</strong> para lograr esto.</p><p>Analizará los datos en la columna <strong>Descripción_Producto</strong> para mover el tamaño y el color de la bicicleta en columnas separadas.</p><ol start="1" style="list-style-type:lower-alpha"><li>Comience agregando una nueva columna en blanco a la derecha de la columna M, <strong>Descripción_Producto</strong>. Esta nueva columna se convierte en la columna N.</li><li>Resalte la columna M, <strong>Descripción_Producto</strong>.</li><li>En la barra de herramientas <strong>Datos </strong>(Data), haga clic en el botón <strong>Texto a columnas</strong> (Text to Columns) en la cinta de opciones <strong>Herramientas de Datos</strong> (Data Tools).</li><li>En la ventana <strong>Texto a Columnas </strong>(Text to Columns), seleccione <strong>Coma </strong>(Comma) como único delimitador y haga clic en <strong>Aplicar </strong>(Apply).</li><li>Todos los tamaños de bicicletas ahora deben moverse a la columna N.</li><li>Ponga el nombre a la columna N “<strong>Tamaño </strong>(Size)”.<br>Luego, repita este proceso para eliminar el color de la bicicleta de la columna <strong>Descripción_Producto</strong>.</li><li>Agregue una nueva columna nuevamente a la derecha de la columna M.</li><li>Use la herramienta <strong>Texto a Columnas </strong>(Text to Columns) nuevamente, pero esta vez establezca el delimitador en <strong>Espacio </strong>(Space).<br>Esto mueve el color de las bicicletas a la nueva columna para que todo lo que quede en la columna M ahora sean los modelos de las bicicletas.</li><li>Nombre la nueva columna “<strong>Color</strong>”.</li><li>Cambie el nombre de la columna M de Product_Desciption a <strong>Model </strong>(Modelo).</li><li>Ahora debería tener tres columnas, cada una de las cuales muestra una parte de la descripción de la bicicleta.</li></ol><ol start="1" style="list-style-type:lower-alpha"></ol></div>
+                      </div>
+                    </div>
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+              </div>
+          </div>
+        </div>
+      
+    </base-view>
+                </div>
+            </div>
+        </div>
+
+        <!-- div><div class="component__inner"></div></div -->
+        </text-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="63921f3b1580fe07c5b6e713" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 4.7619%;"><!---->
+                
+                <div data-socialgoodpulse-id="63921f3b1580fe07c5b6e713" class="63921f3b1580fe07c5b6e713 block background-color-white remove-bottom-padding remove-top-padding ">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="63921f3b1580fe07c5b6e713" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper background-color-white remove-bottom-padding remove-top-padding ">
+        <div class="block__header ">
+              <div class="block__header-inner ">
+                  
+                    <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+              </div>
+          </div>
+        </div>
+      
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$888967025$--><!----><graphic-view modelid="639220e50dbbc507f7597ea4" class="is-left" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="graphic-inner component__inner">
+            <div data-socialgoodpulse-id="639220e50dbbc507f7597ea4" class="component graphic 639220e50dbbc507f7597ea4  is-left   ">
+                <div class="component__header-container">
+                    <base-view type="component" lowercase_component="graphic" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header graphic__header">
+              <div class="component__header-inner graphic__header-inner">
+                  
+                    <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+              </div>
+          </div>
+        </div>
+      
+    </base-view>
+                </div>
+                <div class="component__widget">
+                    <!--?lit$888967025$-->
+                        <div class="graphic__image-container ">
+                            <img id="graphic__image" aria-hidden="false" tabindex="0" class="graphic__image js-graphic-set-image-src" src="data:image/png; charset=UTF-8;base64,iVBORw0KGgoAAAANSUhEUgAAAP8AAABrCAYAAAC4/1SfAAAOeUlEQVR4nO2dzWrjyBbH/77cZ5ieSeCuAlnYWJpL9zs0ZECG7BLKi4Yh5AWizUBi6I30Ak0z0AuL9s4gwQQa5hEyzLWMtAhkdaFzp3s/67qL0kdJKsmO444j1fmBIXZJ8lGdOvVxlPq79/fff3MQBKEd/9i1AQRB7AYKfoLQFAp+gtAUCn6C0BQKfoLQFAp+gtAUCn6C0BQK/g7w9evXXZuwkjbYqAupLyj4CUJTKPgJQlMo+AlCUzoU/At8OD/H+YdFwyEfcH7+Fp++PJ1V7SCpu7efUK2aBT5oX2dJ/WSvbtRHh4IfAPaxf/9bjWO+4NNv99jff2qbWsTnAL92oVVvky+f8Pb8PXD2Du/eJa+rl/jj6hxN40wb6FjwA3t7QHBd9cqXT7/ij5cvsfd5B0a1gn1YV2fYC65a36i3yeI6AKwrvDGlD1+8xi9nr3Dzm2qm1B66F/xHP+HVTXn0X+A6AF7++P2uzGoJJt6cvcLN+w+g+AeABf682cfLH19Ui8x/49Xne/zv6Y3aGp0LfsDEkVUc/b98+g03r37Ca4UPiRLmG1xZ93ivXP9rxpe/cI89fF/bbu7xV4srqYPBD7x4LY/+YtS3jsxVpxEJL17/DAu0/seL77HXGOBNHcPzp5PBL4/+NOpvwgu8/uUMe8Gvnchqb84P2Nv/jD/+o6iExZ+42d/DD09v1NboaPCno/97XNGovyEm3pztIbh6j5tdm7IzXuD1zxZQToIuPuD8/T2sn1+jzWPKP3dtwLfDxJG1j5t7GvU3xnyDs1c3eK9v9IvM/hXw9uoc59mHr3D27he0fUjpkYBn+/n69Su+++67XZvRSBts1IXUF52d9hME0QwFP0FoCgU/QWgKBT9BaErv999/p4QfQWhIj3NOwd9y4jhGv9/ftRmNtMFGXUh9QdN+gtAUCn6C0BQKfoLQFAp+gtCUJw/+YNxDr9dDbxysc7A41nQRf3vTiITUR6ZLtd5lCsGfBWavB1VsyuXUMJ45sQuzl/vr2XWiaceevUyIJhVgTG3sSZCCP8btMn/nXZYbSoC590RWEY8jGKM3sBHCgBNxcM4ROQYQ2jh9DgEVuzBHojExn4NzHwwh7FMXMSxMubB5cUGPBr8l9dP+cIZrqZ3E7iXUsZ/31MoRptDDm7hclk5XjFDU4z+GAOMssBZI46d/sSgElDyLK468Ndes9bEoG4/HG8wwDAwOAKQBv7hAHzFcM599xq5ZsjO/frWs6R6ICjwj4o4BDhicMYMD4GB+UuZzBnAYDncYOABuOFH+efY+vUZ6bl4u3jJRVlceOdyAsEFcPjnecHjEiTqiSKqdrA4Z92uO9xMfpvUaOYm/k3P8DX3c5KeCjfI1KnbmZcxXf244kdSWxPnZPVBbWUnqC2XwO1Hq0MQxSUUbTlRsGKrglJ2iKM8aHvOV56+8PlGhEFiloKiS+jbpYAufiYB7kI+V11thY3aZtAOQz68J/pIdxQ6q7r4IFakvaqb9Fo4ZAHi4dAO4lx4AhklpDRbflufwAA4GMJI//6sqV50f2hgkU7cR5RW+LfEtql45wMBQHIvVPn4M1lTKRyCEPaibtktLmYlYGuRNZ5BM+Uc1y1Kijto1v2U7MACE9gh2CIAdwyod0z8cVk+8ixAmf/5LVa4633AQJUkeTsmex2EdgwEAPMxVT1P7h6h65Q5RqDgWq328DfoXk8TmENFdtTwYJ4HNfEwtAOgjbzpRod1wnuc5iGbqE379I5xk3bsBxy6HPvIRILThBAAQJ7MEiM6iXB6MiyN75Xzi8ViwHeE4b5SPpGlyzHSRjPIh7KTS82Quw3HZzat8vIGFuS2JccG8/vuzNsPgT/PCg2SqEtoOqOlsiLQSkNb8yUer1uScSwkm6SUv1uQkHxh3nFIyUXV+OUFIa/5GVOvpPIknvbJ6lBNu1cTbw3y8yZpf9f3qNX8xL1C0VXmPDYlOQpD6grb0doA2bJdtg426QFt6CUJzKPgJQlMo+AlCU3pRFNGanyA0hBJ+HaANybQ22KgLlPAjCM2h4CcITaHgJwhNoeAnCE2h4NcOIZaxjoRi/SVcmL0x/U99y1Fq+NUp6TytsGOA8QOUWYLx4zTqyqow5eAoKt+U7Crp0e1WiShXwslfFKjdJFVYKvu33AbU/q9o+BmGUbNTKsDcM2BsYyP3N8CapjJQGxC7OJ2dZNuKI8eAN8orLHZNjJaOVA7Yg6Q8dmGOlplWHheFjxtZt4C81dVnHkbPSbyT2ArBeIQlYyVthRiuOcDsRN7qPFXuvqxO+08mcIzqXvDYvYTHJpiUt3c3jHrBuCTRHbsws1EzhmuacGNZHy4JqGCciDOEsAdyz1Xq0aRrx66Zv49dmKaLWLatKRr7F1hIHUf/6AQGlrhN7LyehYmIRHr4BCzZLx9fzxCySb6HvH+BCQM85Wb63WAdMyCMoNgqj6Y6BUoznpo6fOysi9iAYIzR0sFHe1D63IENBx/XEDVQrPkPcHRilNR7Azg2qnv6gzF6jxr1QtiDOY45B+cRHMPDaBwA1jRRdE3VZ0XPFYwHiCZpb+aDeaP67wptDObHmV1G07Fl7iKEGOKwDwihi1RoMq+jgQEsb2PcRSGMYqHYa768fTbBEMy92r33TXVanvH4uKwsw4JxTxyz6ayL2AChqSAPSCnB3IMxjHDaW91pKxN+/YsJmKzeG8zhGSc4Kn1TMPdgOB8fNeoxP52S9HF00hw01pQj13PIA7Dmyrn4QyJMUn+sjKhYw7GFXUrZq5Q7rFAq2xm5vJWQRmMVlQxBfZ1WZzzWtKiSc5t2DhT4T0rsnsIe+pLfioTLAT5yvnLga9DwS5Ve6nqZWNnwD+rE4NZAKRlVQF4iDIS82HpXzmSfylLh1cTeAPbQz2XElLJXguGhhVqTh4c7DYiCvFXkYDmqy/DX1Wm9tJfAg22HO79P7YhdnNrDgqpRBdknDQNfs4afN0cQOLBDhbySHFASd80t5hHEcM0RllmjjuBs0s/0L7CQNN/kOsymsJWKLWvLFZcCYUl4TrUU2Cm1DaCpTutFPQUMfrJMoN9ZeDri6xlCeBilHfbAzt6Pg4ctOVdo+HkYjaQpcImDQenJQOziUppiHgwMwJvnybpT+4HCj3LQiZFoeJj0afE1ZlvrZ0TSawRf8cRAKBnLOZDYvcyWQZYozNfCsYtLz8BJeY20S5K6yuouo6lORecu33cwLj96tTB9Jk83dCH98RV5VmeAwU8Gsv7hsPiDO4EDO1S3x4Z/8unjYsIA1Dfk/sUCkbMs9EJDPx9N+xcfRRIvmVJGEz9RaV0HIUTpjdJsv4Wpz5L3PfQGEYbrX6yZwBHTXW9UfD6etGhrGsFBLi8+sIfw007CmiaP/uQ62L2CrLzmL/slp7lOy/c9wqR6X/0LLHxWEAsldki5PY6WcCJ1e6QtvR2gDdtl22CjLtCWXoLQHAp+gtAUCn6C0BTS8CMITaGEXwdoQzKtDTbqAiX8CEJzKPgJQlMo+AlCUyj4CUJTKPg1JhjvWnKM2CWk4ZfQHQ2/sj2SrcG4ajvRYlQafuvp9wGk4SfokoZf7MIceWB+uvNrgug06RStKTjf/aYjYjuoNPxi91TS75PUsVTwjIg7Brjh+NwxwJnPC0SOwcF87jNww4nyAp9xANlLLvMZOOQLRQ43YHBxSMQdw+BO5HOWnc+4r7hm9nliY/a5dO3Uvux7DIdH8nXKN9RExc5yfQibmV/63rr7/sZEkeSPgu3lAx1uZHXJc1+qzvGZVO+yj6r1nrYZoNpulDYSj8dnHIbDo5JPy0SOIY6TP0t8QRp+Ktqs4dc/wokR5jOTB5wzu5Y8nun+lQU/qvUe2qPML00CM8S2qNfwK3MX1astkYZfhbZr+PVxsUjkulX5iZpzjk4MhLPrpO4DzFNRlvgas5Bhkjk50VmQfczq9eSI7bNKw086EJeeUR20E0jDr6MaftZUzk+s7gD6Rycw0g4/mMMzHNgWklmQJBvV62GwfsUT22YdDT8AQIDxCmEZ0vDruIaf+I2Bsv3KAzFhYuofzD0YJ0ei8zoYZDJRXH7RUL8TVmn4CQKMeyJWmtxEGn6pbR3R8Itds/ioMZjDg6rzrmIdM4Sz06L9/UMM4eGSng8+C1Zp+ImZ7QjweT57rYE0/IBOafj1Lz7iZCbp942WcCL1zzVVsI7BwhBhIb9jYcp9DGVNwOfwvwyEksARA2wWJzXLW4C29HaCNmyXbYONukBbeglCcyj4CUJTKPgJQlNIw48gNIUSfh2gDcm0NtioC5TwIwjNoeAnCE2h4CcITaHgJwhNoeDXGNLw0xvS8KteqPB//YXrP1rDT2wgKpcL/cCy+Ib62AfdA2n4dRyVhh+wro4fafgVCDAeLcFY8Sa3p+FXFs0QiG3QHooaKGLb8IN3B5KGnzaoNPxE4A8kHb9cCauCpOylvYZfem9FXb4ta/hV9PJ8zmBwxkrXSTXaVlpNGn5aUqfht0a7IQ2/MrGLS0+Wq0rZsoZfopeX6RQkEmn28VDSPkg09DZRAyINPw2o1/AL5h6MYYRTxdb0MqThByAVGhn6iunR1jX8hAJSWkfx7VKo5ljHYFhCmCiWYGwdBQ7F9UnDr9us0vALlwN8lMU+agY+0vALVlTmYzT8ahJvQv1njgAxrmdhok4k6nx2HWcBt1HsJ5CGX0dZR8NPnjE2DHyk4WeJAJRVfAZ2+j6dOm+o4WdNpaSLlGjLRvk7RFLdChmtawTXM4TseD31nZW3Sxp+XWKVht9DZONJwy+ZJssNO3IMgPlJruFbaPglo/zpJTw5yA8GMMIZLmfhhlN+0vDrOqs0/PqHQ6CwZHdg1zw1Ig2/dSz5Bhp+1jFDGJaShUniLXzElJ80/DSn3B5HSziRuj3Slt4O0Ibtsm2wURdoSy9BaA4FP0FoCgU/QWgKafgRhKb8HwNiUedIRjOHAAAAAElFTkSuQmCC" data-large="./courses/content/m3/es-XL/assets/aadb8d8260af0032739c61ce9cc7a911f422d92d.png" data-small="./courses/content/m3/es-XL/assets/aadb8d8260af0032739c61ce9cc7a911f422d92d.png" alt="3.4.7 imagen de laboratorio 1">
+
+                            <!--?lit$888967025$-->
+
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+        </graphic-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="639c7354c533e302c3719d8c" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 4.7619%;"><!---->
+                
+                <div data-socialgoodpulse-id="639c7354c533e302c3719d8c" class="639c7354c533e302c3719d8c block background-color-white remove-bottom-padding remove-top-padding ">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="639c7354c533e302c3719d8c" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper background-color-white remove-bottom-padding remove-top-padding ">
+        <div class="block__header ">
+              <div class="block__header-inner ">
+                  
+                    <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+              </div>
+          </div>
+        </div>
+      
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$888967025$--><!----><text-view modelid="639c7354c533e302c3719d8d" class="is-full" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="text-inner component__inner">
+            <div class="component__header-container">
+                <div data-socialgoodpulse-id="639c7354c533e302c3719d8d" class="component text 639c7354c533e302c3719d8d  is-full   ">
+                    <base-view type="component" lowercase_component="text" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header text__header">
+              <div class="component__header-inner text__header-inner">
+                  
+                    <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$--> <div class="component__content">
+                      <div tabindex="0" class="component__body text__body">
+                        <div class="component__body-inner text__body-inner"><!--?lit$888967025$--><p><strong>Paso 5: Eliminación de Espacios Adicionales</strong></p><p>Cuando se pegan datos de fuentes externas en una hoja de cálculo de Excel, existe una buena probabilidad de que las celdas contengan espacios adicionales que deban eliminarse para que las búsquedas y las consultas generen resultados precisos. La función ESPACIOS o TRIM se utiliza para eliminar el exceso de espacios y tabulaciones en las celdas de la hoja de cálculo de Excel. En este paso, utilizará las funciones de ESPACIOS o TRIM para limpiar los datos.</p><ol start="1" style="list-style-type:lower-alpha"><li>Inserte dos nuevas columnas en blanco a la derecha de la columna I, <strong>País</strong>. Se convertirán en las columnas J y K.</li><li>Nombre las dos nuevas columnas Longitud (Length) y ESPACIOS (TRIM), respectivamente.</li><li>En la columna Longitud, en la celda <strong>J2</strong>, ingrese la función <strong>=LARGO(I2) o =LEN(I2)</strong> para ver cuántos caracteres hay en la celda <strong>I2</strong>.<br>El resultado debe ser 13, que es la cantidad de caracteres en “Estados Unidos” (United States) si se cuenta el espacio en el medio.</li><li>Ahora copie esta función <strong>LARGO o LEN</strong> de la celda <strong>J2</strong> hasta la celda <strong>J8</strong>.<br>Observe que las otras celdas con Estados Unidos (United States) muestran una longitud de 14 caracteres y no 13. Esto se debe a que cada una de estas celdas contiene un espacio adicional.<br>En la celda <strong>I4</strong>, el espacio adicional está al frente. En la celda <strong>I6</strong>, el espacio adicional está entre las palabras United y States. En la celda <strong>I8</strong>, el espacio adicional no se nota fácilmente, pero está al final.</li></ol></div>
+                      </div>
+                    </div>
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+              </div>
+          </div>
+        </div>
+      
+    </base-view>
+                </div>
+            </div>
+        </div>
+
+        <!-- div><div class="component__inner"></div></div -->
+        </text-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="639216cfe2d3830779e3a5e2" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 4.7619%;"><!---->
+                
+                <div data-socialgoodpulse-id="639216cfe2d3830779e3a5e2" class="639216cfe2d3830779e3a5e2 block background-color-white remove-bottom-padding remove-top-padding ">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="639216cfe2d3830779e3a5e2" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper background-color-white remove-bottom-padding remove-top-padding ">
+        <div class="block__header ">
+              <div class="block__header-inner ">
+                  
+                    <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+              </div>
+          </div>
+        </div>
+      
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$888967025$--><!----><graphic-view modelid="639216d0e2d3830779e3a5f1" class="is-left" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="graphic-inner component__inner">
+            <div data-socialgoodpulse-id="639216d0e2d3830779e3a5f1" class="component graphic 639216d0e2d3830779e3a5f1  is-left   ">
+                <div class="component__header-container">
+                    <base-view type="component" lowercase_component="graphic" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header graphic__header">
+              <div class="component__header-inner graphic__header-inner">
+                  
+                    <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+              </div>
+          </div>
+        </div>
+      
+    </base-view>
+                </div>
+                <div class="component__widget">
+                    <!--?lit$888967025$-->
+                        <div class="graphic__image-container ">
+                            <img id="graphic__image" aria-hidden="false" tabindex="0" class="graphic__image js-graphic-set-image-src" src="data:image/png; charset=UTF-8;base64,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" data-large="./courses/content/m3/es-XL/assets/5def7fe8c0dc871b480b4c5d3a2a78647bc3f3b5.png" data-small="./courses/content/m3/es-XL/assets/5def7fe8c0dc871b480b4c5d3a2a78647bc3f3b5.png" alt="3.4.7 Imagen de laboratorio 2">
+
+                            <!--?lit$888967025$-->
+
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+        </graphic-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="63a3f270c2670d01d20e1f7b" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 4.7619%;"><!---->
+                
+                <div data-socialgoodpulse-id="63a3f270c2670d01d20e1f7b" class="63a3f270c2670d01d20e1f7b block background-color-white remove-bottom-padding remove-top-padding ">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="63a3f270c2670d01d20e1f7b" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper background-color-white remove-bottom-padding remove-top-padding ">
+        <div class="block__header ">
+              <div class="block__header-inner ">
+                  
+                    <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+              </div>
+          </div>
+        </div>
+      
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$888967025$--><!----><text-view modelid="63a3f271c2670d01d20e1f7c" class="is-full" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="text-inner component__inner">
+            <div class="component__header-container">
+                <div data-socialgoodpulse-id="63a3f271c2670d01d20e1f7c" class="component text 63a3f271c2670d01d20e1f7c  is-full   ">
+                    <base-view type="component" lowercase_component="text" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header text__header">
+              <div class="component__header-inner text__header-inner">
+                  
+                    <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$--> <div class="component__content">
+                      <div tabindex="0" class="component__body text__body">
+                        <div class="component__body-inner text__body-inner"><!--?lit$888967025$--><p>Para eliminar los espacios adicionales en estas celdas, use la función ESPACIOS o TRIM en la columna K.</p><ol start="5" style="list-style-type:lower-alpha"><li>En la celda <strong>K4</strong>, ingrese <strong>=ESPACIOS(I4) o =TRIM(I4)</strong>. La función elimina el espacio inicial de la celda <strong>I4</strong>.</li><li>Copie la función ESPACIOS (TRIM) en las celdas <strong>K6</strong> y <strong>K8</strong>.  La función elimina los espacios de estas celdas.</li></ol></div>
+                      </div>
+                    </div>
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+              </div>
+          </div>
+        </div>
+      
+    </base-view>
+                </div>
+            </div>
+        </div>
+
+        <!-- div><div class="component__inner"></div></div -->
+        </text-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="639216cfe2d3830779e3a5e3" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 4.7619%;"><!---->
+                
+                <div data-socialgoodpulse-id="639216cfe2d3830779e3a5e3" class="639216cfe2d3830779e3a5e3 block background-color-white remove-bottom-padding remove-top-padding ">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="639216cfe2d3830779e3a5e3" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper background-color-white remove-bottom-padding remove-top-padding ">
+        <div class="block__header ">
+              <div class="block__header-inner ">
+                  
+                    <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+              </div>
+          </div>
+        </div>
+      
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$888967025$--><!----><graphic-view modelid="639216d0e2d3830779e3a5f4" class="is-left" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="graphic-inner component__inner">
+            <div data-socialgoodpulse-id="639216d0e2d3830779e3a5f4" class="component graphic 639216d0e2d3830779e3a5f4  is-left   ">
+                <div class="component__header-container">
+                    <base-view type="component" lowercase_component="graphic" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header graphic__header">
+              <div class="component__header-inner graphic__header-inner">
+                  
+                    <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+              </div>
+          </div>
+        </div>
+      
+    </base-view>
+                </div>
+                <div class="component__widget">
+                    <!--?lit$888967025$-->
+                        <div class="graphic__image-container ">
+                            <img id="graphic__image" aria-hidden="false" tabindex="0" class="graphic__image js-graphic-set-image-src" src="data:image/png; charset=UTF-8;base64,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" data-large="./courses/content/m3/es-XL/assets/e13b8b7410f410e6da9cac621bc8cf8ab744d5be.png" data-small="./courses/content/m3/es-XL/assets/e13b8b7410f410e6da9cac621bc8cf8ab744d5be.png" alt="3.4.7 Imagen de laboratorio 3">
+
+                            <!--?lit$888967025$-->
+
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+        </graphic-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="63a3f860069e6208334617d7" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 4.7619%;"><!---->
+                
+                <div data-socialgoodpulse-id="63a3f860069e6208334617d7" class="63a3f860069e6208334617d7 block background-color-white remove-bottom-padding remove-top-padding ">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="63a3f860069e6208334617d7" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper background-color-white remove-bottom-padding remove-top-padding ">
+        <div class="block__header ">
+              <div class="block__header-inner ">
+                  
+                    <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+              </div>
+          </div>
+        </div>
+      
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$888967025$--><!----><text-view modelid="63a3f860069e6208334617d8" class="is-full" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="text-inner component__inner">
+            <div class="component__header-container">
+                <div data-socialgoodpulse-id="63a3f860069e6208334617d8" class="component text 63a3f860069e6208334617d8  is-full   ">
+                    <base-view type="component" lowercase_component="text" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header text__header">
+              <div class="component__header-inner text__header-inner">
+                  
+                    <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$--> <div class="component__content">
+                      <div tabindex="0" class="component__body text__body">
+                        <div class="component__body-inner text__body-inner"><!--?lit$888967025$--><ol start="7" style="list-style-type:lower-alpha"><li>Para asegurarse de eliminar los espacios adicionales en la columna País, copie y pegue la función <strong>ESPACIOS</strong> (TRIM) en todas las celdas de la columna K.<br>Se eliminan todos los espacios adicionales en la columna M. Los valores de la columna ESPACIOS ahora deben pegarse en la columna País (Country).</li><li>Seleccione las celdas <strong>K2</strong> a <strong>K89</strong> y cópielas.</li><li>Seleccione las celdas <strong>I2</strong> a <strong>I89</strong> y haga clic en la flecha hacia abajo debajo de la herramienta <strong>Pegar</strong> (Paste) y, a continuación, seleccione <strong>Pegar Valores</strong> (Paste Values).</li></ol></div>
+                      </div>
+                    </div>
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+              </div>
+          </div>
+        </div>
+      
+    </base-view>
+                </div>
+            </div>
+        </div>
+
+        <!-- div><div class="component__inner"></div></div -->
+        </text-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="6392a2bcc0599c02e72fa59b" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 4.7619%;"><!---->
+                
+                <div data-socialgoodpulse-id="6392a2bcc0599c02e72fa59b" class="6392a2bcc0599c02e72fa59b block background-color-white remove-bottom-padding remove-top-padding ">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="6392a2bcc0599c02e72fa59b" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper background-color-white remove-bottom-padding remove-top-padding ">
+        <div class="block__header ">
+              <div class="block__header-inner ">
+                  
+                    <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+              </div>
+          </div>
+        </div>
+      
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$888967025$--><!----><graphic-view modelid="6392a2bcc0599c02e72fa59c" class="is-left" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="graphic-inner component__inner">
+            <div data-socialgoodpulse-id="6392a2bcc0599c02e72fa59c" class="component graphic 6392a2bcc0599c02e72fa59c  is-left   ">
+                <div class="component__header-container">
+                    <base-view type="component" lowercase_component="graphic" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header graphic__header">
+              <div class="component__header-inner graphic__header-inner">
+                  
+                    <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+              </div>
+          </div>
+        </div>
+      
+    </base-view>
+                </div>
+                <div class="component__widget">
+                    <!--?lit$888967025$-->
+                        <div class="graphic__image-container ">
+                            <img id="graphic__image" aria-hidden="false" tabindex="0" class="graphic__image js-graphic-set-image-src" src="data:image/png; charset=UTF-8;base64,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" data-large="./courses/content/m3/es-XL/assets/835557f36e051f6bec150883f7ea7f1820b72a7d.png" data-small="./courses/content/m3/es-XL/assets/835557f36e051f6bec150883f7ea7f1820b72a7d.png" alt="3.4.7 Imagen de laboratorio 4">
+
+                            <!--?lit$888967025$-->
+
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+        </graphic-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="639c742f9225280385e94ae9" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 4.7619%;"><!---->
+                
+                <div data-socialgoodpulse-id="639c742f9225280385e94ae9" class="639c742f9225280385e94ae9 block background-color-white remove-bottom-padding remove-top-padding ">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="639c742f9225280385e94ae9" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper background-color-white remove-bottom-padding remove-top-padding ">
+        <div class="block__header ">
+              <div class="block__header-inner ">
+                  
+                    <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+              </div>
+          </div>
+        </div>
+      
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$888967025$--><!----><text-view modelid="639c742f9225280385e94aea" class="is-full" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="text-inner component__inner">
+            <div class="component__header-container">
+                <div data-socialgoodpulse-id="639c742f9225280385e94aea" class="component text 639c742f9225280385e94aea  is-full   ">
+                    <base-view type="component" lowercase_component="text" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header text__header">
+              <div class="component__header-inner text__header-inner">
+                  
+                    <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$--> <div class="component__content">
+                      <div tabindex="0" class="component__body text__body">
+                        <div class="component__body-inner text__body-inner"><!--?lit$888967025$--><p>Esto pega solo los valores (nombres de países) en la columna I, y no las fórmulas que estaban en la columna K.</p><ol start="10" style="list-style-type:lower-alpha"><li>Elimine las columnas Longitud y ESPACIOS, ya que ya no son necesarias.</li></ol><p><strong>Paso 6: Cambio de mayúsculas y minúsculas</strong></p><p>Al importar datos a Excel desde otra fuente, los datos a menudo se muestran en mayúsculas o minúsculas.</p><p>Excel le permite cambiar el texto a mayúsculas, minúsculas o mayúsculas. Las funciones MAYUSC (UPPER), MINUSC (LOWER), NOMPROPIO (PROPER) le permiten cambiar el uso de mayúsculas y minúsculas en el texto.</p><p style="margin-left:40px">=MAYUSC(dirección de celda) - para conversión a mayúsculas</p><p style="margin-left:40px">=MINUSC(dirección de celda) - para conversión a minúsculas</p><p style="margin-left:40px">=NOMPROPIO(dirección de celda): para la conversión a mayúsculas en la primera letra de cada palabra.</p><p>En este ejemplo, los nombres de los países se cambiarán a minúsculas.</p><ol start="1" style="list-style-type:lower-alpha"><li>Agregue una nueva columna a la derecha de la columna I, País (Country). Esta nueva columna se convertirá en la columna J.</li><li>Etiquete la nueva columna como MINUSC (LOWER).</li><li>En la celda <strong>J2</strong>, ingrese la función<strong> = MINUSC(I2) o =LOWER(I2)</strong><br> El resultado debe ser “united states” (estados unidos), todo en minúsculas.</li><li>Copie y pegue la fórmula en las celdas <strong>I3</strong> a <strong>I89</strong> para poner todos los nombres de países en minúsculas.</li></ol></div>
+                      </div>
+                    </div>
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+              </div>
+          </div>
+        </div>
+      
+    </base-view>
+                </div>
+            </div>
+        </div>
+
+        <!-- div><div class="component__inner"></div></div -->
+        </text-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="6392a39d09d39b030d10859f" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 4.7619%;"><!---->
+                
+                <div data-socialgoodpulse-id="6392a39d09d39b030d10859f" class="6392a39d09d39b030d10859f block background-color-white remove-bottom-padding remove-top-padding ">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="6392a39d09d39b030d10859f" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper background-color-white remove-bottom-padding remove-top-padding ">
+        <div class="block__header ">
+              <div class="block__header-inner ">
+                  
+                    <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+              </div>
+          </div>
+        </div>
+      
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$888967025$--><!----><graphic-view modelid="6392a39e09d39b030d1085a0" class="is-left" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="graphic-inner component__inner">
+            <div data-socialgoodpulse-id="6392a39e09d39b030d1085a0" class="component graphic 6392a39e09d39b030d1085a0  is-left   ">
+                <div class="component__header-container">
+                    <base-view type="component" lowercase_component="graphic" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header graphic__header">
+              <div class="component__header-inner graphic__header-inner">
+                  
+                    <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+              </div>
+          </div>
+        </div>
+      
+    </base-view>
+                </div>
+                <div class="component__widget">
+                    <!--?lit$888967025$-->
+                        <div class="graphic__image-container ">
+                            <img id="graphic__image" aria-hidden="false" tabindex="0" class="graphic__image js-graphic-set-image-src" src="data:image/png; charset=UTF-8;base64,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" data-large="./courses/content/m3/es-XL/assets/48cd1f866bd2200a649dae730a7e027fbe15d563.png" data-small="./courses/content/m3/es-XL/assets/48cd1f866bd2200a649dae730a7e027fbe15d563.png" alt="3.4.7 Imagen de laboratorio 5">
+
+                            <!--?lit$888967025$-->
+
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+        </graphic-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="639216d0e2d3830779e3a5e5" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 4.7619%;"><!---->
+                
+                <div data-socialgoodpulse-id="639216d0e2d3830779e3a5e5" class="639216d0e2d3830779e3a5e5 block background-color-white remove-bottom-padding remove-top-padding ">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="639216d0e2d3830779e3a5e5" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper background-color-white remove-bottom-padding remove-top-padding ">
+        <div class="block__header ">
+              <div class="block__header-inner ">
+                  
+                    <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+              </div>
+          </div>
+        </div>
+      
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$888967025$--><!----><text-view modelid="639216d0e2d3830779e3a5fa" class="is-full" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="text-inner component__inner">
+            <div class="component__header-container">
+                <div data-socialgoodpulse-id="639216d0e2d3830779e3a5fa" class="component text 639216d0e2d3830779e3a5fa  is-full   ">
+                    <base-view type="component" lowercase_component="text" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header text__header">
+              <div class="component__header-inner text__header-inner">
+                  
+                    <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$--> <div class="component__content">
+                      <div tabindex="0" class="component__body text__body">
+                        <div class="component__body-inner text__body-inner"><!--?lit$888967025$--><ol start="5" style="list-style-type:lower-alpha"><li>Copie todos los nombres de países en la columna MINUSC (LOWER) columna J, y utilice <strong>Pegar</strong> &gt; <strong>Pegar valores</strong> para pegarlos en la columna País, columna I.</li><li>Experimente con las funciones MAYUSC (UPPER) y NOMPROPIO (PROPER) de la misma manera.</li><li>Una vez finalizado, elimine la columna LOWER, ya que ya no es necesaria.</li></ol><p><strong>Paso 7: Resalte los Posibles Errores</strong></p><p>En este paso, resaltará todos los costos unitarios y precios unitarios que sean cero. Este tipo de datos es falso y sesgará el conjunto de datos, por lo que es importante encontrar estos errores y corregirlos.</p><ol start="1" style="list-style-type:lower-alpha"><li>Seleccione la columna Costo_Unitario (Unit_Cost) y Precio_Unitario (Unit_Price).</li><li>Haga clic en la herramienta <strong>Formato Condicional</strong> (Conditional Format)  &gt; <strong>Resaltar Reglas de Celda</strong> (Highlight Cell Rules) &gt; <strong>Igual a</strong> (Equal To).</li><li>En la ventana Formato Condicional, introduzca <strong>0</strong> en el cuadro Igual a y haga clic en <strong>Listo</strong> (Done) para resaltar todas las bicicletas con un costo unitario o un precio unitario de cero.<br>La celda <strong>O9</strong> en Costo_Unitario y la celda <strong>P9</strong> en Precio_Unitario deben resaltarse en rojo.<br>Un analista de datos deberá determinar qué valores ingresar en estas celdas o eliminar estas dos filas de datos. En este ejemplo, conocemos los valores que deben estar en estas celdas, porque están en otras filas de la hoja.</li><li>Corrija el problema ingresando $1252 en la celda <strong>O9</strong> y $769 en la celda <strong>P9</strong>.</li></ol></div>
+                      </div>
+                    </div>
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+              </div>
+          </div>
+        </div>
+      
+    </base-view>
+                </div>
+            </div>
+        </div>
+
+        <!-- div><div class="component__inner"></div></div -->
+        </text-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="639216d0e2d3830779e3a5e6" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 4.7619%;"><!---->
+                
+                <div data-socialgoodpulse-id="639216d0e2d3830779e3a5e6" class="639216d0e2d3830779e3a5e6 block background-color-white remove-bottom-padding remove-top-padding ">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="639216d0e2d3830779e3a5e6" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper background-color-white remove-bottom-padding remove-top-padding ">
+        <div class="block__header ">
+              <div class="block__header-inner ">
+                  
+                    <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+              </div>
+          </div>
+        </div>
+      
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$888967025$--><!----><opentextbox-view modelid="639216d0e2d3830779e3a5fb" class="is-full" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="component">
+          <div class="component__inner openTextBox__inner">
+            <div data-socialgoodpulse-id="639216d0e2d3830779e3a5fb" class="component opentextbox 639216d0e2d3830779e3a5fb  is-full   ">
+              <div class="component__header-container">
+                <div data-socialgoodpulse-id="639216d0e2d3830779e3a5fb" class="opentabletextbox ">
+                  <base-view type="component" lowercase_component="openTextBox" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header openTextBox__header">
+              <div class="component__header-inner openTextBox__header-inner">
+                  
+                    <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$--> <div class="component__content">
+                      <div tabindex="0" class="component__body openTextBox__body">
+                        <div class="component__body-inner openTextBox__body-inner"><!--?lit$888967025$--><p><strong>Paso 8: Buscar y Reemplazar</strong></p><p>Buscar y reemplazar lo ayudará a ubicar y reemplazar datos en toda la hoja de trabajo.</p><p>En este ejemplo, supongamos que queremos reemplazar F y M en la columna Género_Cliente con las palabras completas Mujer y Hombre para facilitar la lectura.</p><ol start="1" style="list-style-type:lower-alpha"><li>Seleccione la columna <strong>Género_Cliente</strong> (Customer Gender).</li><li>Haga clic en el botón <strong>Buscar y Seleccionar</strong> (Find &amp; Select) y seleccione <strong>Reemplazar</strong> (Replace).</li><li>En el cuadro de diálogo Buscar y Reemplazar, ingrese la siguiente información.<br>1) <strong>Buscar</strong> (Find what): M<br>2) <strong>Reemplazar con</strong> (Replace with): Hombre<br>3) Expanda <strong>Opciones de Búsqueda</strong> (Options) y en <strong>Dentro de</strong> (Within): seleccione <strong>Selección</strong> (Selection)</li><li>Haga clic en<strong> Buscar Todo</strong> (Find All).<br>Todas las celdas con un valor de M se resaltan.</li><li>Haga clic en <strong>Reemplazar Todo</strong> (Replace all).<br>Deberían haberse reemplazado 38 coincidencias.</li><li>Para buscar y reemplazar “F” por “Mujer”, utilice el mismo proceso, excepto en <strong>Opciones de Búsqueda</strong> (Options) asegúrese de que <strong>Dentro de</strong> (Within): esté configurado en <strong>Selección</strong> (Selection) y que la opción <strong>Distinguir Mayúsculas de Minúsculas</strong> (Match case) esté activada. Esto evitará que Excel cambie la “f” minúscula si la hubiera, cambiando el sentido de otras palabras.</li></ol></div>
+                      </div>
+                    </div>
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+              </div>
+          </div>
+        </div>
+      
+    </base-view>
+                </div>
+              </div>
+                  <div class="component__widget openTextBox__widget question-container">
+                      <!--?lit$888967025$--> <div class="openTextBox__preText"><!--?lit$888967025$-->¿Cuántos reemplazos se realizaron de <strong>F</strong> a <strong>Mujer</strong>?</div>                         
+      
+                      <div class="openTextBox__textArea-container">
+                          <fieldset class="openTextBox__fieldset" tabindex="0">
+                          <legend class="openTextBox__legend">
+                            <!--?lit$888967025$--><!--?lit$888967025$-->Área de Respuesta<!--?-->
+                          </legend>
+                          <textarea class="openTextBox__textArea" rows="3" name="answerArea" placeholder="Escriba sus respuestas aquí." aria-label="Escriba sus respuestas aquí.">&lt;!----&gt;&lt;!----&gt;</textarea>
+                          </fieldset>
+                      </div>
+                      <div tabindex="0" class="openTextBox__answerText answergray  hide">
+                        <!--?lit$888967025$-->
+                      <!--?lit$888967025$-->Deberían haberse reemplazado 50 coincidencias.
+                    </div>
+
+                      <div class="btn__container">                        
+                        <button class="btn-text openTextBox__showButton show-answer show"><!--?lit$888967025$-->Mostrar respuesta</button>     
+                        <button class="btn-text openTextBox__hideButton hide-answer hide"><!--?lit$888967025$-->Ocultar respuesta</button>                    
+                      </div>
+                      <!--?lit$888967025$--><!--?-->
+                  </div>
+              </div>
+            </div>
+          </div>
+        
+      </opentextbox-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="6392a8270f7c3e0359c20929" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 4.7619%;"><!---->
+                
+                <div data-socialgoodpulse-id="6392a8270f7c3e0359c20929" class="6392a8270f7c3e0359c20929 block background-color-white remove-bottom-padding remove-top-padding ">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="6392a8270f7c3e0359c20929" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper background-color-white remove-bottom-padding remove-top-padding ">
+        <div class="block__header ">
+              <div class="block__header-inner ">
+                  
+                    <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+              </div>
+          </div>
+        </div>
+      
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$888967025$--><!----><opentextbox-view modelid="6392a8270f7c3e0359c2092a" class="is-full" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="component">
+          <div class="component__inner openTextBox__inner">
+            <div data-socialgoodpulse-id="6392a8270f7c3e0359c2092a" class="component opentextbox 6392a8270f7c3e0359c2092a  is-full   ">
+              <div class="component__header-container">
+                <div data-socialgoodpulse-id="6392a8270f7c3e0359c2092a" class="opentabletextbox ">
+                  <base-view type="component" lowercase_component="openTextBox" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header openTextBox__header">
+              <div class="component__header-inner openTextBox__header-inner">
+                  
+                    <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$--> <div class="component__content">
+                      <div tabindex="0" class="component__body openTextBox__body">
+                        <div class="component__body-inner openTextBox__body-inner"><!--?lit$888967025$--><p><strong>Paso 9: Revisión Ortográfica</strong></p><p>La función de verificación ortográfica está disponible en la pestaña <strong>Revisar</strong> (Review). Puede verificar la ortografía por celda, columna, fila u hoja. El corrector ortográfico garantiza que los errores ortográficos no provoquen que los resultados de las búsquedas o las consultas sean incorrectos.</p><ol start="1" style="list-style-type:lower-alpha"><li>Seleccione todas las columnas con valores de texto.</li><li>En la barra de herramientas <strong>Revisar</strong>, haga clic en la herramienta <strong>Ortografía</strong> (Spelling).<br>Las palabras que no se encuentran en el diccionario se muestran en el cuadro de diálogo <strong>Ortografía</strong> que aparece en el lado derecho de la hoja de trabajo.</li><li>Haga clic en <strong>Ignorar</strong> para cualquiera de los nombres de columna que se identifican como no incluidos en el diccionario.</li><li>Seleccione <strong>Cambiar Todo</strong> (Change All) para las palabras encontradas mal escritas. (<strong>Cambiar Todo</strong> se encuentra debajo de la flecha desplegable en el extremo derecho del <strong>Cuadro de Sugerencias</strong>.)</li></ol></div>
+                      </div>
+                    </div>
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+              </div>
+          </div>
+        </div>
+      
+    </base-view>
+                </div>
+              </div>
+                  <div class="component__widget openTextBox__widget question-container">
+                      <!--?lit$888967025$--> <div class="openTextBox__preText"><!--?lit$888967025$-->¿Cuántas palabras de las columnas que contienen texto se identificaron como incorrectas?</div>                         
+      
+                      <div class="openTextBox__textArea-container">
+                          <fieldset class="openTextBox__fieldset" tabindex="0">
+                          <legend class="openTextBox__legend">
+                            <!--?lit$888967025$--><!--?lit$888967025$-->Área de Respuesta<!--?-->
+                          </legend>
+                          <textarea class="openTextBox__textArea" rows="3" name="answerArea" placeholder="Escriba sus respuestas aquí." aria-label="Escriba sus respuestas aquí.">&lt;!----&gt;&lt;!----&gt;</textarea>
+                          </fieldset>
+                      </div>
+                      <div tabindex="0" class="openTextBox__answerText answergray  hide">
+                        <!--?lit$888967025$-->
+                      <!--?lit$888967025$-->1. La palabra Diciembre estaba mal escrita en la celda D18.
+                    </div>
+
+                      <div class="btn__container">                        
+                        <button class="btn-text openTextBox__showButton show-answer show"><!--?lit$888967025$-->Mostrar respuesta</button>     
+                        <button class="btn-text openTextBox__hideButton hide-answer hide"><!--?lit$888967025$-->Ocultar respuesta</button>                    
+                      </div>
+                      <!--?lit$888967025$--><!--?-->
+                  </div>
+              </div>
+            </div>
+          </div>
+        
+      </opentextbox-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="6392a9a3476e6a03339d052e" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 4.7619%;"><!---->
+                
+                <div data-socialgoodpulse-id="6392a9a3476e6a03339d052e" class="6392a9a3476e6a03339d052e block background-color-white remove-bottom-padding remove-top-padding ">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="6392a9a3476e6a03339d052e" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper background-color-white remove-bottom-padding remove-top-padding ">
+        <div class="block__header ">
+              <div class="block__header-inner ">
+                  
+                    <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+              </div>
+          </div>
+        </div>
+      
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$888967025$--><!----><text-view modelid="6392a9a3476e6a03339d052f" class="is-full" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="text-inner component__inner">
+            <div class="component__header-container">
+                <div data-socialgoodpulse-id="6392a9a3476e6a03339d052f" class="component text 6392a9a3476e6a03339d052f  is-full   ">
+                    <base-view type="component" lowercase_component="text" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header text__header">
+              <div class="component__header-inner text__header-inner">
+                  
+                    <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$--> <div class="component__content">
+                      <div tabindex="0" class="component__body text__body">
+                        <div class="component__body-inner text__body-inner"><!--?lit$888967025$--><p><strong>Paso 10: Eliminar Formato.</strong></p><p>A veces, el conjunto de datos puede tener formato incrustado en la hoja de cálculo. El formato puede ser tan simple como el color o la alineación del texto. También puede haber una condición lógica aplicada a las celdas mediante la opción de formato condicional de Excel que otorga a muchas celdas un formato diferente al resto de la hoja.</p><p>En este ejemplo, se eliminará el formato de alineación de la columna <strong>Edad_Grupo</strong> (Age_Group).</p><ol start="1" style="list-style-type:lower-alpha"><li>Seleccione la columna <strong>Edad_Grupo</strong>.</li><li>Con la columna seleccionada, haga clic en el botón <strong>Borrar</strong> (Clear) en la barra de herramientas <strong>Inicio</strong> (Home) y seleccione <strong>Borrar Formatos</strong> (Clear Formats).<br>Esto eliminará la formación de alineación central de la columna <strong>Edad_Grupo</strong>.</li></ol><p><strong>Paso 11: Guarde su Trabajo y Cierre Excel</strong></p><ol start="1" style="list-style-type: lower-alpha;"><li>Guarde la hoja de cálculo como Bike Sales_Prepare_Lab 3.4.7_fixed.</li><li>Cierre Excel.</li></ol></div>
+                      </div>
+                    </div>
+                  <!--?lit$888967025$-->
+                  <!--?lit$888967025$-->
+              </div>
+          </div>
+        </div>
+      
+    </base-view>
+                </div>
+            </div>
+        </div>
+
+        <!-- div><div class="component__inner"></div></div -->
+        </text-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!---->
+                            </div>
+                        </div>
+                        <!--?lit$888967025$-->
+                    </div>
+                </div>
+            </div>
+        <sgpluse-opentextboxcontroller-view modelid="" is-touch="false" fullscreen="true" device="medium" browser="Microsoft Edge" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+            <div class="openTextBoxController__button-container">
+                <button tabindex="0" class="btn-text showhidebtn openTextBoxController__showButton show-answer show"><!--?lit$888967025$-->Mostrar todas las respuestas</button>    
+                <button tabindex="0" class="btn-text showhidebtn openTextBoxController__hideButton hide-answer hide"><!--?lit$888967025$-->Ocultar todas las respuestas</button>    
+                <button class="btn-text resetbtn openTextBoxController__resetButton"><!--?lit$888967025$-->Borrar todas las respuestas</button>         
+            </div>
+            <!--?lit$888967025$--><hr>
+            <!--?lit$888967025$-->
+                <div class="post-text" tabindex="0">
+                    <!--?lit$888967025$-->© 2017 - 2023 Cisco and/or its affiliates. All rights reserved. Cisco Public
+                </div>
+                   
+        </sgpluse-opentextboxcontroller-view><script></script></body>
+<script>
+    window.addEventListener("load", function () {
+      console.log("loaded");
+      document.querySelectorAll(".answergray").forEach(function (ele) {
+        ele.classList.add("u-display-none");
+      });
+      document.querySelectorAll(".hide-answer").forEach(function (ele) {
+        ele.classList.add("u-display-none");
+      });
+      document.querySelectorAll(".show-answer").forEach(function (ele) {
+        ele.addEventListener("click", function (e) {
+          e.currentTarget.nextElementSibling.classList.remove("u-display-none");
+          e.currentTarget
+            .closest(".question-container")
+            .querySelectorAll(".answergray")
+            .forEach(function (ele) {
+              ele.classList.remove("u-display-none");
+            });
+          ele.classList.add("u-display-none");
+        });
+      });
+      document.querySelectorAll(".hide-answer").forEach(function (ele) {
+        ele.addEventListener("click", function (e) {
+          e.currentTarget.previousElementSibling.classList.remove("u-display-none");
+          e.currentTarget
+            .closest(".question-container")
+            .querySelectorAll(".answergray")
+            .forEach(function (ele) {
+              ele.classList.add("u-display-none");
+            });
+          ele.classList.add("u-display-none");
+        });
+      });
+      var event = new Event("click", {
+        bubbles: true,
+        cancelable: true,
+      });
+      document
+        .querySelectorAll(".openTextBoxController__showButton")
+        .forEach(function (ele) {
+          ele.addEventListener("click", function (e) {
+            e.currentTarget.nextElementSibling.classList.remove("u-display-none");
+            ele.classList.add("u-display-none");
+            document.querySelectorAll(".show-answer").forEach(function (ele) {
+              ele.dispatchEvent(event);
+            });
+          });
+        });
+
+      document
+        .querySelectorAll(".openTextBoxController__hideButton")
+        .forEach(function (ele) {
+          ele.addEventListener("click", function (e) {
+            e.currentTarget.previousElementSibling.classList.remove("u-display-none");
+            ele.classList.add("u-display-none");
+            document.querySelectorAll(".hide-answer").forEach(function (ele) {
+              ele.dispatchEvent(event);
+            });
+          });
+        });
+
+      document
+        .querySelectorAll(".openTextBoxController__resetButton")
+        .forEach(function (ele) {
+          ele.addEventListener("click", function (e) {
+            document.querySelectorAll("textArea").forEach(function (ele) {
+              ele.value = "";
+            });
+          });
+        });
+
+      document
+      .querySelectorAll('textarea')
+      .forEach(function (ele){
+        ele.defaultValue = ele.defaultValue.replace(/<!--.*?-->/g, '');
+      })
+        let checkButtonLabel = "check_button_label_placeHolder";
+        let hideButtonLabel = "hide_button_label_placeHolder";
+        document.querySelectorAll(".check__button").forEach(function (ele) {
+        let answerBox = document.querySelector(".check__solution")
+        if (!answerBox.classList.contains("check__hidden")) {
+          answerBox.classList.add("check__hidden");
+          ele.innerText = checkButtonLabel;
+        }
+          ele.addEventListener("click", function (e) {
+            if (answerBox.classList.contains("check__hidden")) {
+              answerBox.classList.remove("check__hidden")
+              ele.innerText = hideButtonLabel;
+            } else {
+              answerBox.classList.add("check__hidden")
+              ele.innerText = checkButtonLabel;
+            }
+          })
+        })
+    });
+  </script>
+  </html>
