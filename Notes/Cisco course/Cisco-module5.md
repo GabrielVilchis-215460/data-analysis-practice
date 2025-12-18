@@ -68,4 +68,15 @@ Una diferencia es que XLOOKUP devuelve de forma predeterminada una coincidencia 
 
 Arriba, la fórmula se modifica agregando las funciones IF y ISNA , y los valores Único y Duplicado. La función IF realiza comparaciones lógicas y la función ISNA busca celdas que contengan el mensaje de error #N/A. Juntos, le dicen a Excel que devuelva "Único" si la función VLOOKUP no encuentra ningún duplicado (y, por lo tanto, devuelve un error) y que devuelva "Duplicado" en caso contrario.
 
+# Funcion LARGUE o k.esimo.mayor
+Esta funcion devuelve los valores mas altos o mayores en un conjunto de datos.
 
+# Funcion SMALL
+Esta funcion devuelve los valores mas bajos o menores en un conjunto de datos.
+
+# Consideraciones adicionales
+Una vez que se identifican los valores atípicos, el siguiente desafío es qué hacer con ellos. Los valores atípicos pueden indicar errores en los datos o pueden ser datos válidos que deben investigarse para saber por qué parece ser una anomalía. Hay un par de formas en que un analista de datos puede lidiar con los valores atípicos.
+
+1. Eliminarlos. En un conjunto de datos grande, la eliminación de algunos valores atípicos probablemente no afecte el análisis general. Sin embargo, es importante crear una copia de los datos para poder investigar qué causó los valores atípicos en primer lugar. En este ejemplo, se podría eliminar la fila 72 del conjunto de datos de ventas de bicicletas.
+
+2. Normalícelos (ajuste su valor). El valor de los valores atípicos se cambia para estar ligeramente por encima del valor máximo en el conjunto de datos. Este es un buen método si no sesga los datos. Existen varios métodos estadísticos para normalizar los datos. Investigue los diversos métodos antes de ajustar aleatoriamente los valores de los datos. En el conjunto de datos de ventas de bicicletas de ejemplo, el valor de Order_Quantity del 19 de diciembre de 43 a 20 podría estar justo por encima del valor máximo de 19.
