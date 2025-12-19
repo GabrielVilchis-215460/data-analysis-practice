@@ -25,17 +25,17 @@ Este tipo de analisis se basa en el analisis descriptivo y predictivo al recomen
 Este tipo de analisis de datos mejora el proceso del analisis descriptivo al profundizar e intentar descubrir las causas.
 
 ## Proceso/ciclo de vida del analisis de datos
-1. Hacer la Pregunta - El proceso de análisis siempre comienza con una pregunta que debe responderse. Algunas preguntas son simples, como "¿qué color de bicicleta es más popular entre los compradores más jóvenes?" Otros son muy complejos, como "¿por qué ciertos tipos de células cancerosas presentan resistencia a los tratamientos de radiación?"
+1. **Hacer la Pregunta** - El proceso de análisis siempre comienza con una pregunta que debe responderse. Algunas preguntas son simples, como "¿qué color de bicicleta es más popular entre los compradores más jóvenes?" Otros son muy complejos, como "¿por qué ciertos tipos de células cancerosas presentan resistencia a los tratamientos de radiación?"
 
-2. Obtener los datos - Este paso implica el proceso de localizar y obtener datos que sean relevantes para la pregunta y luego determinar si hay suficientes datos para completar el análisis.
+2. **Obtener los datos** - Este paso implica el proceso de localizar y obtener datos que sean relevantes para la pregunta y luego determinar si hay suficientes datos para completar el análisis.
 
-3. Investigar los datos - Los datos vienen en muchas formas y de muchas fuentes diferentes. Este paso implica determinar si los datos están completos y contienen la información relevante para el análisis.
+3. **Investigar los datos** - Los datos vienen en muchas formas y de muchas fuentes diferentes. Este paso implica determinar si los datos están completos y contienen la información relevante para el análisis.
 
-4. Preparar los datos - Este paso puede implicar muchas tareas a fin de transformar los datos a un formato adecuado para la herramienta que se utilizará. Este proceso a veces se denomina "limpieza" de los datos, ya que puede haber registros en blanco o errores obvios en el conjunto de datos.
+4. **Preparar los datos** - Este paso puede implicar muchas tareas a fin de transformar los datos a un formato adecuado para la herramienta que se utilizará. Este proceso a veces se denomina "limpieza" de los datos, ya que puede haber registros en blanco o errores obvios en el conjunto de datos.
 
-5. Analizar los datos - El análisis es el proceso de identificación de patrones, correlaciones y relaciones contenidas en un conjunto o conjuntos de datos para extraer inferencias y conclusiones. A menudo, el análisis se basa en técnicas estadísticas y herramientas de software, como hojas de cálculo y aplicaciones de visualización.
+5. **Analizar los datos** - El análisis es el proceso de identificación de patrones, correlaciones y relaciones contenidas en un conjunto o conjuntos de datos para extraer inferencias y conclusiones. A menudo, el análisis se basa en técnicas estadísticas y herramientas de software, como hojas de cálculo y aplicaciones de visualización.
 
-6. Presentar los resultados - Este suele ser el último paso para los analistas de datos. Es el proceso que consiste en comunicar los resultados a los responsables de la toma de decisiones. Esto puede realizarse en forma de informe, representaciones gráficas o una combinación de ambos. A veces también se le pide al analista de datos que recomiende acciones basadas en los resultados.
+6. **Presentar los resultados** - Este suele ser el último paso para los analistas de datos. Es el proceso que consiste en comunicar los resultados a los responsables de la toma de decisiones. Esto puede realizarse en forma de informe, representaciones gráficas o una combinación de ambos. A veces también se le pide al analista de datos que recomiende acciones basadas en los resultados.
 
 ## Creacion de portfolio de proyectos
 Ejemplo de archivo README.md para un proyecto de analisis de datos.
