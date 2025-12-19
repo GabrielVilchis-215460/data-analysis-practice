@@ -2,10 +2,10 @@
 El analiis de datos se puede describir como el proceso de uso de datos para responder preguntas, identificar tendencias y extraer información.
 
 Existen 4 tipos de análisis de datos y cada uno responde a un tipo diferente de pregunta, los cuales son;
-- Analisis descriptivo -> ¿Que sucedío?
-- Analisis predictivo -> ¿Que podria suceder en el futuro?
-- Analisis prescriptivo -> ¿Que se debe hacer a continuación?
-- Analisis de diagnostico -> ¿Porque sucedio esto?
+- **Analisis descriptivo**-> ¿Que sucedío?
+- **Analisis predictivo** -> ¿Que podria suceder en el futuro?
+- **Analisis prescriptivo** -> ¿Que se debe hacer a continuación?
+- **Analisis de diagnostico** -> ¿Porque sucedio esto?
 
 ## Tipos de analisis de datos
 # Analisis descriptivo
