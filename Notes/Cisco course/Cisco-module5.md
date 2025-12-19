@@ -19,22 +19,22 @@ Diferentes enfoques estadisticas se utilizan en el analisis de Big Data.
 Las estadisticas descriptivas describen una muestra (es util para comprender los datos de la muestra y para determinar la calidad de los datos).
 
 En el analisis de Big Data se utilizan con mucha frecuencia una serie de analisis inferenciales, los cuales son:
-- Analisis de clúster -> Se utiliza para encontrar grupos de observaciones que sean similares entre si.
+- **Analisis de clúster** -> Se utiliza para encontrar grupos de observaciones que sean similares entre si.
 
-- Analisis de asociación -> Se utiliza para encontrar apariciones concurrentes de valores de diferentes variables.
+- **Analisis de asociación** -> Se utiliza para encontrar apariciones concurrentes de valores de diferentes variables.
 
-- Analisis de regresión -> Se utiliza para cuantificar la relación, de haber alguna, entre las variaciones de una o mas variables.
+- **Analisis de regresión** -> Se utiliza para cuantificar la relación, de haber alguna, entre las variaciones de una o mas variables.
 
 ## Tipos de visualizacion de datos
 1. Graficos de linea -> Usar cuando un se tenga un dataset continuo, cuando la cantidad de puntos de datos sea alta, o mostrar la tendencia en los datos con el tiempo.
 
-2. Graficos de columna -> Usar para mostra valores de una variable especifica en categorias similares.
+2. **Graficos de columna** -> Usar para mostra valores de una variable especifica en categorias similares.
 
-3. Graficos de barras -> Usar cuando los nombres de cada punto de datos sean largos.
+3. **Graficos de barras** -> Usar cuando los nombres de cada punto de datos sean largos.
 
-4. Graficos circulares -> Usar para mostrar la composicion de un total.
+4. **Graficos circulares** -> Usar para mostrar la composicion de un total.
 
-5. Graficos de dispersion -> Usar para demostrar el agrupamiento o identificar valores atipicos en los datos. Visualizar correlaciones o para mostrar la distribucion de muchos puntos de datos.
+5. **Graficos de dispersion** -> Usar para demostrar el agrupamiento o identificar valores atipicos en los datos. Visualizar correlaciones o para mostrar la distribucion de muchos puntos de datos.
 
 ## Abordar anomalias en los datos
 Antes de que pueda comenzar el análisis de datos, se debe dedicar un tiempo considerable a la limpieza de los datos. Durante la fase de limpieza de datos, puede encontrar valores atípicos o anomalías en los datos. Si es así, deben investigarse para que se puedan corregir los datos o se pueda comprender el significado del punto de datos periférico.
