@@ -1,0 +1,698 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20253.25.1210.1815                               -->
+<workbook original-version='18.1' source-build='2025.3.1 (20253.25.1210.1815)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='HollywoodsMostProfitableStories' inline='true' name='federated.1lnl23l115iv6m10xmeoy05xsi4x' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='HollywoodsMostProfitableStories' name='textscan.1gsxw4c1i1s7ju1ejzn4i0k00wii'>
+            <connection class='textscan' directory='C:/Users/bylet/Downloads' filename='HollywoodsMostProfitableStories.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1gsxw4c1i1s7ju1ejzn4i0k00wii' name='HollywoodsMostProfitableStories.csv' table='[HollywoodsMostProfitableStories#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='Film' ordinal='0' />
+            <column datatype='string' name='Genre' ordinal='1' />
+            <column datatype='string' name='Lead Studio' ordinal='2' />
+            <column datatype='integer' name='Audience  score %' ordinal='3' />
+            <column datatype='real' name='Profitability' ordinal='4' />
+            <column datatype='integer' name='Rotten Tomatoes %' ordinal='5' />
+            <column datatype='real' name='Worldwide Gross' ordinal='6' />
+            <column datatype='integer' name='Year' ordinal='7' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[HollywoodsMostProfitableStories.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Film</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Film]</local-name>
+            <parent-name>[HollywoodsMostProfitableStories.csv]</parent-name>
+            <remote-alias>Film</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[HollywoodsMostProfitableStories.csv_6DCC3472051D4784AD626EBBDD1F3A4A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Genre</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Genre]</local-name>
+            <parent-name>[HollywoodsMostProfitableStories.csv]</parent-name>
+            <remote-alias>Genre</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[HollywoodsMostProfitableStories.csv_6DCC3472051D4784AD626EBBDD1F3A4A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Lead Studio</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Lead Studio]</local-name>
+            <parent-name>[HollywoodsMostProfitableStories.csv]</parent-name>
+            <remote-alias>Lead Studio</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[HollywoodsMostProfitableStories.csv_6DCC3472051D4784AD626EBBDD1F3A4A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Audience  score %</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Audience  score %]</local-name>
+            <parent-name>[HollywoodsMostProfitableStories.csv]</parent-name>
+            <remote-alias>Audience  score %</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[HollywoodsMostProfitableStories.csv_6DCC3472051D4784AD626EBBDD1F3A4A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Profitability</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Profitability]</local-name>
+            <parent-name>[HollywoodsMostProfitableStories.csv]</parent-name>
+            <remote-alias>Profitability</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[HollywoodsMostProfitableStories.csv_6DCC3472051D4784AD626EBBDD1F3A4A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Rotten Tomatoes %</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Rotten Tomatoes %]</local-name>
+            <parent-name>[HollywoodsMostProfitableStories.csv]</parent-name>
+            <remote-alias>Rotten Tomatoes %</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[HollywoodsMostProfitableStories.csv_6DCC3472051D4784AD626EBBDD1F3A4A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Worldwide Gross</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Worldwide Gross]</local-name>
+            <parent-name>[HollywoodsMostProfitableStories.csv]</parent-name>
+            <remote-alias>Worldwide Gross</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[HollywoodsMostProfitableStories.csv_6DCC3472051D4784AD626EBBDD1F3A4A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[HollywoodsMostProfitableStories.csv]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[HollywoodsMostProfitableStories.csv_6DCC3472051D4784AD626EBBDD1F3A4A]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[Lead Studio]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+      <column caption='HollywoodsMostProfitableStories.csv' datatype='table' name='[__tableau_internal_object_id__].[HollywoodsMostProfitableStories.csv_6DCC3472051D4784AD626EBBDD1F3A4A]' role='measure' type='quantitative' />
+      <column-instance column='[Lead Studio]' derivation='None' name='[none:Lead Studio:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Year]' derivation='None' name='[none:Year:qk]' pivot='key' type='quantitative' />
+      <group hidden='true' name='[Inclusiones (Lead Studio,Year)]' name-style='unqualified' user:auto-column='include'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[none:Lead Studio:nk]' />
+          <groupfilter function='level-members' level='[none:Year:qk]' />
+        </groupfilter>
+      </group>
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='es_ES' class='hyper' dbname='C:/Users/bylet/AppData/Local/Temp/TableauTemp/#TableauTemp_08zlj7f1k2ihk51evhdvc0qkxk5h.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='01/10/2026 01:50:19 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Film</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Film]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Film</remote-alias>
+              <ordinal>0</ordinal>
+              <family>HollywoodsMostProfitableStories.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>74</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[HollywoodsMostProfitableStories.csv_6DCC3472051D4784AD626EBBDD1F3A4A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Genre</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Genre]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Genre</remote-alias>
+              <ordinal>1</ordinal>
+              <family>HollywoodsMostProfitableStories.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[HollywoodsMostProfitableStories.csv_6DCC3472051D4784AD626EBBDD1F3A4A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Lead Studio</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Lead Studio]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Lead Studio</remote-alias>
+              <ordinal>2</ordinal>
+              <family>HollywoodsMostProfitableStories.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>14</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[HollywoodsMostProfitableStories.csv_6DCC3472051D4784AD626EBBDD1F3A4A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Audience  score %</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Audience  score %]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Audience  score %</remote-alias>
+              <ordinal>3</ordinal>
+              <family>HollywoodsMostProfitableStories.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>41</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[HollywoodsMostProfitableStories.csv_6DCC3472051D4784AD626EBBDD1F3A4A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Profitability</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Profitability]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Profitability</remote-alias>
+              <ordinal>4</ordinal>
+              <family>HollywoodsMostProfitableStories.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>72</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[HollywoodsMostProfitableStories.csv_6DCC3472051D4784AD626EBBDD1F3A4A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Rotten Tomatoes %</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Rotten Tomatoes %]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Rotten Tomatoes %</remote-alias>
+              <ordinal>5</ordinal>
+              <family>HollywoodsMostProfitableStories.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>50</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[HollywoodsMostProfitableStories.csv_6DCC3472051D4784AD626EBBDD1F3A4A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Worldwide Gross</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Worldwide Gross]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Worldwide Gross</remote-alias>
+              <ordinal>6</ordinal>
+              <family>HollywoodsMostProfitableStories.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>74</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[HollywoodsMostProfitableStories.csv_6DCC3472051D4784AD626EBBDD1F3A4A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Year</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Year]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Year</remote-alias>
+              <ordinal>7</ordinal>
+              <family>HollywoodsMostProfitableStories.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[HollywoodsMostProfitableStories.csv_6DCC3472051D4784AD626EBBDD1F3A4A]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Estados Unidos Mexicanos&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='HollywoodsMostProfitableStories.csv' id='HollywoodsMostProfitableStories.csv_6DCC3472051D4784AD626EBBDD1F3A4A'>
+            <properties context=''>
+              <relation connection='textscan.1gsxw4c1i1s7ju1ejzn4i0k00wii' name='HollywoodsMostProfitableStories.csv' table='[HollywoodsMostProfitableStories#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='Film' ordinal='0' />
+                  <column datatype='string' name='Genre' ordinal='1' />
+                  <column datatype='string' name='Lead Studio' ordinal='2' />
+                  <column datatype='integer' name='Audience  score %' ordinal='3' />
+                  <column datatype='real' name='Profitability' ordinal='4' />
+                  <column datatype='integer' name='Rotten Tomatoes %' ordinal='5' />
+                  <column datatype='real' name='Worldwide Gross' ordinal='6' />
+                  <column datatype='integer' name='Year' ordinal='7' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Hoja 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='CiscoSansTT,Arial,sans-serif' fontsize='16'>¿Qué género de película obtiene las mayores puntuaciones de audiencia?</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='HollywoodsMostProfitableStories' name='federated.1lnl23l115iv6m10xmeoy05xsi4x' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1lnl23l115iv6m10xmeoy05xsi4x'>
+            <column datatype='integer' name='[Audience  score %]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Genre]' role='dimension' type='nominal' />
+            <column-instance column='[Audience  score %]' derivation='Avg' name='[avg:Audience  score %:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Audience  score %]' derivation='Count' name='[cnt:Audience  score %:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Genre]' derivation='None' name='[none:Genre:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1lnl23l115iv6m10xmeoy05xsi4x].[avg:Audience  score %:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1lnl23l115iv6m10xmeoy05xsi4x].[cnt:Audience  score %:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>([federated.1lnl23l115iv6m10xmeoy05xsi4x].[avg:Audience  score %:qk] + [federated.1lnl23l115iv6m10xmeoy05xsi4x].[cnt:Audience  score %:qk])</rows>
+        <cols>[federated.1lnl23l115iv6m10xmeoy05xsi4x].[none:Genre:nk]</cols>
+      </table>
+      <simple-id uuid='{89370F70-2031-4063-8DB6-020EAE7AD6FA}' />
+    </worksheet>
+    <worksheet name='Hoja 2'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>¿Qué estudio de peliculas produjo más ingresos en el año 2010?</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='HollywoodsMostProfitableStories' name='federated.1lnl23l115iv6m10xmeoy05xsi4x' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1lnl23l115iv6m10xmeoy05xsi4x'>
+            <column datatype='string' name='[Lead Studio]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Worldwide Gross]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+            <column-instance column='[Worldwide Gross]' derivation='Avg' name='[avg:Worldwide Gross:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Lead Studio]' derivation='None' name='[none:Lead Studio:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1lnl23l115iv6m10xmeoy05xsi4x].[Inclusiones (Lead Studio,Year)]'>
+            <groupfilter function='reorder-dimensionality' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='crossjoin'>
+                <groupfilter function='member' level='[none:Year:qk]' member='2010' />
+                <groupfilter function='union'>
+                  <groupfilter function='member' level='[none:Lead Studio:nk]' member='&quot;CBS&quot;' />
+                  <groupfilter function='member' level='[none:Lead Studio:nk]' member='&quot;Disney&quot;' />
+                  <groupfilter function='member' level='[none:Lead Studio:nk]' member='&quot;Fox&quot;' />
+                  <groupfilter function='member' level='[none:Lead Studio:nk]' member='&quot;Independent&quot;' />
+                  <groupfilter function='member' level='[none:Lead Studio:nk]' member='&quot;Lionsgate&quot;' />
+                  <groupfilter function='member' level='[none:Lead Studio:nk]' member='&quot;Paramount&quot;' />
+                  <groupfilter function='member' level='[none:Lead Studio:nk]' member='&quot;Sony&quot;' />
+                  <groupfilter function='member' level='[none:Lead Studio:nk]' member='&quot;Summit&quot;' />
+                  <groupfilter function='member' level='[none:Lead Studio:nk]' member='&quot;The Weinstein Company&quot;' />
+                  <groupfilter function='member' level='[none:Lead Studio:nk]' member='&quot;Universal&quot;' />
+                  <groupfilter function='member' level='[none:Lead Studio:nk]' member='&quot;Warner Bros.&quot;' />
+                </groupfilter>
+              </groupfilter>
+              <order>
+                <hierarchy name='[none:Lead Studio:nk]' />
+                <hierarchy name='[none:Year:qk]' />
+              </order>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1lnl23l115iv6m10xmeoy05xsi4x].[Inclusiones (Lead Studio,Year)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.1lnl23l115iv6m10xmeoy05xsi4x].[avg:Worldwide Gross:qk]</rows>
+        <cols>[federated.1lnl23l115iv6m10xmeoy05xsi4x].[none:Lead Studio:nk]</cols>
+      </table>
+      <simple-id uuid='{88357EE8-293B-43CC-BCC8-0FECEA371CA0}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' name='Hoja 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1lnl23l115iv6m10xmeoy05xsi4x].[none:Genre:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{C2AA9448-62A9-4548-92A7-470D6297073F}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Hoja 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1lnl23l115iv6m10xmeoy05xsi4x].[none:Lead Studio:nk]</field>
+            <field>[federated.1lnl23l115iv6m10xmeoy05xsi4x].[none:Year:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{5B145D47-9E72-4BDC-AD79-35528864D32E}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Hoja 1' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Hoja 2' width='192'>
+      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
+      lZI3AAAAAElFTkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>
